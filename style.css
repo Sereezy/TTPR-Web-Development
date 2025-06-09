@@ -1,0 +1,31 @@
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+  }
+  
+  h1 {
+    color: darkgreen;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: red;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+
+    h2 {
+        color: blue;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+  }
+
+  p1 {
+    color: red;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+  }
