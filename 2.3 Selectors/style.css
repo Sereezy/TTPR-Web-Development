@@ -5,3 +5,23 @@ ol {
 }
 
 /* Write your CSS below, don't change the rules above. */
+
+body {
+  text-align: center;
+}
+
+.note {
+  font-size: 20px;
+}
+
+p {
+  color: red;
+}
+
+#id-selector-demo {
+  color: green;
+}
+
+li[value= "4"] {
+  color:blue;
+}
