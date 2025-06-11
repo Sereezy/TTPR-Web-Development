@@ -19,3 +19,43 @@ footer {
   color: midnightblue;
 }
 
+#creative-word{
+  color: midnightblue;
+}
+
+.tile-image {
+  height: 200px;
+  float: left;
+  margin-right: 50px;
+}
+
+.card {
+  width: 45%;
+}
+
+.left{
+  float: left;
+
+}
+
+.right{
+  float: right;
+}
+
+@media (max-width: 680px){
+  .logo {  /* note to self: adjusts the logo when user opens site on a device that has a smaller screen */
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .card { /* note to self: adjusts the card */
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+}
