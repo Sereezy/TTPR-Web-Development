@@ -1,0 +1,34 @@
+/* Write your code here: */
+/* 
+Refer to the goal image.
+You may also link the href="./solution.css" in the index.html to see the webpage with the correct css
+Topics to research:
+
+Grouping Selectors
+Child Selector (>)
+Descendant Selector
+Chaining Selectors
+Combining Multiple Selector Combinations
+Different selector combinations can be combined for more complex targeting. 
+
+It is okay to look at the solution and then try it yourself!
+*/
+h1,h2{
+    color: aqua;
+}
+.box >p.done{
+    color: blue;
+    font-size: 2rem;
+}
+.box li {
+  color: red;
+}
+li.done {
+  color: pink;
+}
+ul p.done {
+  font-size: 0.1rem;
+}
+p {
+  font-size: 5rem;
+}
