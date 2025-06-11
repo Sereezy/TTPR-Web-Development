@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+
+h1{
+    font-size: 50px;   
+    text-transform: uppercase;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#Words{
+    color:white;
+}
+
+img{
+    border: 5px solid white;
+    height: 450px;
+    width: 100%
+}
+
+div{
+    margin-left: 25%;
+    width: 50%;
+}
