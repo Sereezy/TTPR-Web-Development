@@ -12,6 +12,28 @@ body {
 
 h1 {
   font-size: 5rem;
+  width: 60%;
+}
+
+#word {
+  color: midnightblue;
+}
+
+.tile-image{
+  float: left;
+  height: 200px;
+  margin-right: 45px;
+}
+
+.card {
+  width: 47%;
+}
+
+.left {
+  float:left ;
+}
+.right{
+  float: right;
 }
 
 footer {
