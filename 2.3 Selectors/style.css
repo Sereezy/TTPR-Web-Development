@@ -5,3 +5,9 @@ ol {
 }
 
 /* Write your CSS below, don't change the rules above. */
+
+ol {
+  margin-left: -40px;
+  margin-top: -20px;
+  list-style-position: inside;
+}
