@@ -1,0 +1,30 @@
+
+
+body {
+
+    background-color: yellow;
+
+
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+
+.Motivation {
+            width: 60%;
+            margin-left: 25%;
+            color: black;
+
+}
+
+.Picture {
+
+            border: 5px solid white;
+            width: 100%
+
+
+
+}
