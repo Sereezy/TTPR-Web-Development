@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- TODO
-1. Make both paragraph elements wrap around the image.
-2. Use Float to move the cat div to the left and the dog div to the right.
-3. Use clear to make the footer go below both the cat and dog div. -->
-
   <head>
     <meta charset="UTF-8" />
     <title>CSS Float</title>
@@ -19,14 +14,21 @@
       }
 
       .cat {
+        float: left;
         background-color: aquamarine;
       }
 
       .dog {
+        float: right;
         background-color: coral;
       }
 
+      img {
+        float: left;
+      }
+
       footer {
+        clear: both;
         text-align: center;
         background-color: blueviolet;
       }
@@ -46,6 +48,7 @@
         velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
     </div>
+
     <div class="dog">
       <h2>DogCSS</h2>
       <img src="dog.jpeg" alt="dogs in a box" />
