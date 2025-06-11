@@ -1,4 +1,23 @@
 /* Write your code here: */
+h1, h2{
+    color: blueviolet;
+}
+
+.box > p {
+    color: red;
+}
+
+.box li {
+    color: blue;
+}
+
+li.done{
+    color: green;
+}
+
+ul p.done {
+    font-size: 0.5rem;
+}
 /* 
 Refer to the goal image.
 You may also link the href="./solution.css" in the index.html to see the webpage with the correct css
