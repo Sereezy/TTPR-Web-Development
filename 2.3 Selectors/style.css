@@ -5,22 +5,16 @@ ol {
 }
 
 p {
-  color: red;
-}
+  color: red;}
 
 .note {
-  font-size: 20px;
-}
+  font-size: 20px;}
 
 #id-selector-demo {
-  color: green;
-}
+  color: green;}
 
 li[value="4"] {
-  color: blue;
-}
+  color: blue;}
 
-* {
-  text-align: center;
-}
+* {text-align: center;}
 
