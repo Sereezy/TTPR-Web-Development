@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+}
+
+.header1{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.poster {
+    width: 50%;
+    padding: 10px;
+    margin-left: 25%;
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+    animation: colorChange 5s infinite;
+
+
+}
+@keyframes colorChange {
+    0% {
+        color: white;
+        letter-spacing: normal;
+        text-shadow: 0 0 10px #fff;
+    }
+    50% {
+        color: #ff4081;
+        letter-spacing: 0.2em;
+        text-shadow: 0 0 20px #ff4081;
+    }
+    100% {
+        color: #40cfff;
+        letter-spacing: normal;
+        text-shadow: 0 0 10px #40cfff;
+    }
+}
+.img {
+    border: 5px solid red;
+    
+}

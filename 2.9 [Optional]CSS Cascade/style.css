@@ -15,10 +15,24 @@ Use only the selectors and classes provided.
 .box {
   background-color: blue;
   padding: 10px;
+  
 }
 
 p {
   color: yellow;
   margin: 0;
   padding: 0;
+}
+.inner-box {
+  background-color: red;
+  padding: 10px;
+  
+}
+#outer-box {
+  background-color: purple;
+  padding: 10px;
+}
+
+.white-text {
+  color: white;
 }
