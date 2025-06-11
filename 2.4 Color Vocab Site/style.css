@@ -1,0 +1,25 @@
+.class-title {
+height: 200px;
+width: 200px;
+font-weight: normal;
+}
+
+#red {
+color: red;
+}
+
+#blue {
+    color: blue;
+}
+
+#orange {
+    color: orange;
+}
+
+#green {
+    color: green;
+}
+
+#yellow {
+    color: yellow;
+}
