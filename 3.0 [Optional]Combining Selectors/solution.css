@@ -23,3 +23,7 @@ li.done {
 ul p.done {
   font-size: 0.5rem;
 }
+
+p {
+  color : black;
+}

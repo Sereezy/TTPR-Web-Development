@@ -22,3 +22,18 @@ p {
   margin: 0;
   padding: 0;
 }
+
+.white-text {
+  color: white;
+  padding: 5px;
+}
+
+.inner-box {
+  padding: 5px ;
+  background-color: red;
+}
+
+#outer-box {
+  padding: 10px;
+  background-color: purple;
+}

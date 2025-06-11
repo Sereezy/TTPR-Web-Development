@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>CSS Properties</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
     body {
       background-color: cornflowerblue;
       color: white;
@@ -12,18 +13,39 @@
     }
 
     /* Don't change the CSS above, add Your CSS below. No inline css */
-
+    #coraltext {
+      color: coral
+    }
     
+    #emfontEditor {
+      font-size: 2rem;
+    }
+
+    #fontweightEditor {
+      font-weight: 900;
+    }
+
+    #fontfamilyEditor { 
+      font-family: 'Caveat', cursive;
+    }
+
+    #alignmentEditor {
+      text-align: right;
+    }
+
+   html {
+    font-size: 30px
+   }
   </style>
 </head>
 
 <body>
   <h1>Important CSS Properties</h1>
-  <p>Color</p>
-  <p>Font Size</p>
-  <p>Font Weight</p>
-  <p>Font Family</p>
-  <p>Text Align</p>
+  <p id ="coraltext">Color</p>
+  <p id ="emfontEditor">Font Size</p>
+  <p id ="fontweightEditor">Font Weight</p>
+  <p id="fontfamilyEditor">Font Family</p>
+  <p id="alignmentEditor">Text Align</p>
 
   <!-- TODOs
   1. Change the color of <p>Color</p> to "coral" color.

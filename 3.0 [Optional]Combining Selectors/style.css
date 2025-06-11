@@ -13,3 +13,30 @@ Different selector combinations can be combined for more complex targeting.
 
 It is okay to look at the solution and then try it yourself!
 */
+
+
+p.done {
+    color: purple;
+}
+
+p {
+    color : black;
+}
+
+
+body {
+    color: purple;
+}
+
+div {
+    color: green
+}
+
+ul {
+    color: blue;
+}
+
+li.done {
+    color : green;
+}
+
