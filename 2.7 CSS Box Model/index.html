@@ -6,15 +6,51 @@
   <title>CSS Box Model</title>
   <style>
     /* Write your CSS code here */
-
+    .box1{
+      padding: 10px;
+      border: 10px solid black;
+      height: 200px;
+      width: 200px;
+      background-color: antiquewhite;
+      margin-left: 0px;
+    }
+    .box1 p{
+      margin: 0;
+    }
+    .box2{
+      margin-left: 240px;
+      border-top: 20px solid black;
+      border-bottom: 20px solid black;
+      border-left: 10px solid black;
+      border-right: 10px solid black;
+      height: 200px;
+      width: 200px;
+      background-color: aquamarine;
+    }
+    .box3{
+      margin-left: 20px;
+      border: 10px solid black;
+      height: 200px;
+      width: 200px;
+      background-color: blueviolet;
+    }
   </style>
 </head>
 
 <body>
 
-
+<div class="box1">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+    id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+    dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.
+  </p>
+</div>
+<div class="box2"></div>
+<div class="box3"></div>
   <!-- TODOs:
 1. Create 3 Boxes using the div element.
+
 2. Set their sizes to 200px height by 200px wide.
 3. Set different background colors for each of the boxes (I used pink, palegreen and indianred).
 4. Add a paragraph <p> element into the first div and add the following words:
