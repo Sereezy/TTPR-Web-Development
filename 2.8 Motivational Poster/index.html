@@ -14,3 +14,42 @@ It must have the following features:
 6. Read about the text-transform property on MDN docs to make the h1 uppercase with CSS.
   https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational Poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  body{background-color: black;}
+  h1{
+    font-family: "Libre Baskerville";
+    color: white;
+    text-transform: uppercase;
+  }
+  p{color: white;}
+  #poster-pic{
+    border:5px solid white;
+    height: 450px;
+    width: 80%;
+  }
+  #poster{
+    text-align: center;
+    margin-top: 100px;
+    width: 50%;
+    margin-left: 25%;
+  }
+</style>
+</head>
+<body>
+  <div id="poster">
+     <img id="poster-pic" src="./assets/images/images.jpeg" alt="progress">
+     <h1>Every Step is a progress</h1>
+     <p>And it gets you closer</p>
+  </div>
+</body>
+</html>
