@@ -1,0 +1,11 @@
+<h1 style="color: rgb(255, 0, 212);">Three Methods of Adding CSS</h1>
+<h2> Inline Internal External </h2>
+<style>
+    h2 {
+      color: pink;
+    }
+  </style>
+
+
+
+<p> class="external">This uses external CSS.</p>
