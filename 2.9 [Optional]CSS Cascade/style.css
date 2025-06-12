@@ -1,0 +1,24 @@
+/* Don't change the existing CSS. 
+
+Do not change any HTML; 
+write your CSS in style.css. The goal is to:
+
+Make certain text white
+Set the background of a specific div to red
+Set the outermost div's background to purple
+Ensure all boxes have 10px padding
+Use only the selectors and classes provided.
+
+
+*/
+
+.box {
+  background-color: blue;
+  padding: 10px;
+}
+
+p {
+  color: yellow;
+  margin: 0;
+  padding: 0;
+}
