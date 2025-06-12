@@ -10,10 +10,13 @@
   https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators 
   -->
   <style>
-    .container {
+    .container > * {
       color: white;
       border: 5px solid gold;
       display: flex;
+      flex-direction: column;
+      height:100px;
+      width:50px;
     }
 
     /*
