@@ -37,3 +37,19 @@ span {
 .card{
   width: 45%;
 }
+@media (max-width:768px) {
+  h1{
+font-size: 3rem;
+text-align: center;
+  }
+.tile-image{
+
+margin-bottom: 20px;
+}  
+.card{
+
+ width: 100%;
+}
+.card-title{
+}
+}
