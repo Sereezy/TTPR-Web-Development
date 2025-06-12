@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background-color: white;
+    }
+    canvas {
+      display: block;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="gameCanvas"></canvas>
+
+<script>
+(() => {
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+
+  const imageURLs = [
+    "./Honjou Nia.jpg",
+    "./Tobiichi Origami.jpg",
+    "./Kurumi Tokisaki.png",
+    "./Himekawa Yoshino.jpg"
+  ];
+
+  function preloadImages(urls) {
+    return Promise.all(
+      urls.map(url => new Promise((res, rej) => {
+        const img = new Image();
+        img.onload = () => res(img);
+        img.onerror = () => rej(new Error('图片加载失败: ' + url));
+        img.src = url;
+      }))
+    );
+  }
+
+  class BouncingBall {
+    constructor(images, x, y, diameter) {
+      this.images = images;
+      this.imgIndex = 0;
+      this.img = images[this.imgIndex];
+
+      this.x = x;
+      this.y = y;
+      this.d = diameter;
+      this.r = diameter / 2;
+      this.vx = 0;
+      this.vy = 0;
+      this.moving = false; // 记录是否移动过，刚开始不动
+    }
+
+    draw(ctx) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.clip();
+      ctx.drawImage(this.img, this.x - this.r, this.y - this.r, this.d, this.d);
+      ctx.restore();
+    }
+
+    update(canvas) {
+      if (!this.moving) return; // 没动过就不更新位置和速度
+
+      this.x += this.vx;
+      this.y += this.vy;
+
+      const minSpeed = 0.1;
+
+      if (Math.abs(this.vx) > minSpeed) {
+        this.vx *= 0.99;
+        if (Math.abs(this.vx) < minSpeed) {
+          this.vx = this.vx > 0 ? minSpeed : -minSpeed;
+        }
+      } else if (Math.abs(this.vx) > 0) {
+        this.vx = this.vx > 0 ? minSpeed : -minSpeed;
+      }
+
+      if (Math.abs(this.vy) > minSpeed) {
+        this.vy *= 0.99;
+        if (Math.abs(this.vy) < minSpeed) {
+          this.vy = this.vy > 0 ? minSpeed : -minSpeed;
+        }
+      } else if (Math.abs(this.vy) > 0) {
+        this.vy = this.vy > 0 ? minSpeed : -minSpeed;
+      }
+    }
+
+    switchImage() {
+      this.imgIndex = (this.imgIndex + 1) % this.images.length;
+      this.img = this.images[this.imgIndex];
+    }
+
+    checkWallCollision(canvas) {
+      let collided = false;
+      if (this.x - this.r < 0) {
+        this.x = this.r;
+        this.vx = -this.vx;
+        collided = true;
+      } else if (this.x + this.r > canvas.width) {
+        this.x = canvas.width - this.r;
+        this.vx = -this.vx;
+        collided = true;
+      }
+
+      if (this.y - this.r < 0) {
+        this.y = this.r;
+        this.vy = -this.vy;
+        collided = true;
+      } else if (this.y + this.r > canvas.height) {
+        this.y = canvas.height - this.r;
+        this.vy = -this.vy;
+        collided = true;
+      }
+      return collided;
+    }
+
+    checkCollisionWith(other) {
+      const dx = other.x - this.x;
+      const dy = other.y - this.y;
+      const dist = Math.hypot(dx, dy);
+      const minDist = this.r + other.r;
+
+      if (dist < minDist && dist !== 0) {
+        const nx = dx / dist;
+        const ny = dy / dist;
+
+        const dvx = this.vx - other.vx;
+        const dvy = this.vy - other.vy;
+
+        const impactSpeed = dvx * nx + dvy * ny;
+        if (impactSpeed > 0) return false;
+
+        const elasticity = 1;
+        const impulse = (-(1 + elasticity) * impactSpeed) / 2;
+
+        this.vx += impulse * nx;
+        this.vy += impulse * ny;
+        other.vx -= impulse * nx;
+        other.vy -= impulse * ny;
+
+        this.moving = true;
+        other.moving = true;
+
+        const overlap = minDist - dist;
+        const pushFactor = 1.2;
+        const push = overlap / 2 * pushFactor;
+
+        this.x -= nx * push;
+        this.y -= ny * push;
+        other.x += nx * push;
+        other.y += ny * push;
+
+        return true;
+      }
+      return false;
+    }
+  }
+
+  preloadImages(imageURLs).then(imgs => {
+    const diameter = 100;
+    const balls = [];
+
+    // 生成10个球，随机分布，保证刚开始位置不重叠
+    function isOverlapping(x, y, r, others) {
+      return others.some(b => {
+        const dx = b.x - x;
+        const dy = b.y - y;
+        return Math.hypot(dx, dy) < r + b.r;
+      });
+    }
+
+    for (let i = 0; i < 10; i++) {
+      let x, y;
+      do {
+        x = Math.random() * (canvas.width - diameter) + diameter / 2;
+        y = Math.random() * (canvas.height - diameter) + diameter / 2;
+      } while (isOverlapping(x, y, diameter / 2, balls));
+
+      const ball = new BouncingBall(imgs, x, y, diameter);
+      balls.push(ball);
+    }
+
+    let draggingBall = null;
+    let dragStart = null;
+    let dragEnd = null;
+
+    canvas.addEventListener('mousedown', (e) => {
+      const mx = e.clientX;
+      const my = e.clientY;
+      for (let ball of balls) {
+        const dx = mx - ball.x;
+        const dy = my - ball.y;
+        if (Math.hypot(dx, dy) <= ball.r) {
+          draggingBall = ball;
+          dragStart = { x: mx, y: my };
+          dragEnd = null;
+          break;
+        }
+      }
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (draggingBall) {
+        dragEnd = { x: e.clientX, y: e.clientY };
+      }
+    });
+
+    canvas.addEventListener('mouseup', (e) => {
+      if (draggingBall && dragStart && dragEnd) {
+        const dx = dragEnd.x - dragStart.x;
+        const dy = dragEnd.y - dragStart.y;
+        draggingBall.vx = -dx / 10;
+        draggingBall.vy = -dy / 10;
+        draggingBall.moving = true; // 拖动后才开始动
+      }
+      draggingBall = null;
+      dragStart = dragEnd = null;
+    });
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      balls.forEach(ball => ball.update(canvas));
+
+      for (const ball of balls) {
+        if (ball.moving && ball.checkWallCollision(canvas)) {
+          ball.switchImage();
+        }
+      }
+
+      for (let i = 0; i < balls.length; i++) {
+        for (let j = i + 1; j < balls.length; j++) {
+          if (balls[i].checkCollisionWith(balls[j])) {
+            balls[i].switchImage();
+            balls[j].switchImage();
+          }
+        }
+      }
+
+      balls.forEach(ball => ball.draw(ctx));
+
+      if (draggingBall && dragStart && dragEnd) {
+        ctx.beginPath();
+        ctx.moveTo(draggingBall.x, draggingBall.y);
+        ctx.lineTo(dragEnd.x, dragEnd.y);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+})();
+</script>
+
+</body>
+</html>
