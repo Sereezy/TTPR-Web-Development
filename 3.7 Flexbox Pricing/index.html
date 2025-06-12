@@ -13,10 +13,118 @@
         font-family: "Sono", sans-serif;
       }
 
-      @media (max-width: 1250px) {
-        .pricing-container {
+      li {
+        list-style-type: none;
+        text-indent: 0;
+      }
+
+      .pricing-container {
+          margin-left: auto;
+          margin-right: auto;
           flex-direction: column;
           height: 100%;
+          width: 400px;
+        }
+
+        .pricing-plan{
+          text-align: center;
+          background-color: rgb(238, 238, 238);
+          justify-content: center;
+          margin-bottom: 25px;
+          margin-top: 10px;
+        }
+        .plan-title{
+          padding-top: 20px;
+          font-size: 20pt;
+          font-weight: 600;
+        }
+
+        .plan-price{
+          font-size: 30pt;
+          font-weight: 600;
+        }
+
+        .plan-features{
+          text-align: center;
+          text-indent: 0;
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        .plan-features li{
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+
+        .plan-button{
+          margin-bottom: 20px;
+          background-color: orange;
+          height: 35px;
+          width:70px;
+          border-radius: 8%;
+          border: none;
+        }
+
+      @media (min-width: 1400px) {
+        body {
+          font-family: "Sono", sans-serif;
+        }
+
+        li {
+        list-style-type: none;
+        text-indent: 0;
+      }
+
+      .pricing-container {
+          margin-top: 20%;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: row;
+          height: 100%;
+          width: 80%;
+        }
+
+        .pricing-plan{
+          text-align: center;
+          background-color: rgb(238, 238, 238);
+          justify-content: center;
+          width: 400px;
+          padding-left: 15px;
+          padding-right: 25px;
+          margin-left: 20px;
+          margin-right: 40px;
+        }
+        .plan-title{
+          padding-top: 20px;
+          font-size: 20pt;
+          font-weight: 600;
+        }
+
+        .plan-price{
+          font-size: 30pt;
+          font-weight: 600;
+        }
+
+        .plan-features{
+          text-align: center;
+          text-indent: 0;
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        .plan-features li{
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+
+        .plan-button{
+          margin-bottom: 20px;
+          background-color: orange;
+          height: 35px;
+          width:70px;
+          border-radius: 8%;
+          border: none;
         }
       }
     </style>
