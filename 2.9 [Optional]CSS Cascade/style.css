@@ -13,7 +13,7 @@ Use only the selectors and classes provided.
 */
 
 .box {
-  background-color: blue;
+  background-color: red;
   padding: 10px;
 }
 
@@ -21,4 +21,8 @@ p {
   color: yellow;
   margin: 0;
   padding: 0;
+}
+
+.white-text{
+  color: white;
 }
