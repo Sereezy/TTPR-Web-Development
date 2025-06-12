@@ -9,13 +9,21 @@ body {
 .main {
   flex: 1;
 }
-
 h1 {
   font-size: 5rem;
 }
-
 footer {
   text-align: right;
   color: midnightblue;
 }
-
+.tile-image{
+  height:200px;
+  float:left;
+  margin-right:50px;
+}
+.left{
+   float:left;
+}
+.right{
+  float:right;
+}
