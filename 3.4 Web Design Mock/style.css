@@ -19,3 +19,38 @@ footer {
   color: midnightblue;
 }
 
+.tile-image {
+  height: 200px;
+  float: left; 
+  margin-right: 45px;
+}
+
+.left {
+  float: left;
+} 
+
+.right {
+  float: right
+}
+
+.card-title {
+  width: 45%;
+}
+
+.creative {
+  color: midnightblue;
+}
+
+.card {
+  width: 50%;
+  display: block;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.card img {
+  margin-bottom: 30px;
+  width: 50%;
+  display: inline;
+  object-fit: cover;
+}
