@@ -26,6 +26,9 @@ function test() {
     
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
+ var temp = a;
+ a = b;
+ b = temp;
 
 
     
