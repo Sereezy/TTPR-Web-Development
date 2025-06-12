@@ -16,19 +16,27 @@
 
       p {
         font-size: 2em;
+        text-wrap: wrap;
       }
 
       .cat {
         background-color: aquamarine;
+        float: left;
       }
 
       .dog {
         background-color: coral;
+        float: right;
+      }
+      
+      img{
+        float:left
       }
 
       footer {
         text-align: center;
         background-color: blueviolet;
+        clear: inline-end;
       }
     </style>
   </head>
@@ -48,7 +56,7 @@
     </div>
     <div class="dog">
       <h2>DogCSS</h2>
-      <img src="dog.jpeg" alt="dogs in a box" />
+      <img src="dog.jpeg" alt="dogs in a box"/>
       <p class="second-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
