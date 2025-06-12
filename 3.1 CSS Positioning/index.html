@@ -4,25 +4,35 @@
 <head>
   <title>CSS Positioning Exercise</title>
   <style>
-    /* Write your code here */
-       .red-circle {
+    .red-circle {
       width: 200px;
       height: 200px;
       background-color: red;
       border-radius: 50%;
+      position: absolute;
+      top: 150px;
+      left: 250px;
+    }
+
+    .blue-box {
+      background-color: blue;
+      width: 500px;
+      height: 300px;
+      position: relative;
+      top: 200px;
+      left: 200px;
     }
   </style>
 </head>
 
 <body>
   <div class="blue-box">
-    <div class="red-circle">
-    </div>
+    <div class="red-circle"></div>
   </div>
-
 </body>
 
 </html>
+
 <!--
 -Make blue rectangle 300px tall and 500px wide
 -Use position properties to position 200px from the top and 200px from the left
