@@ -13,7 +13,8 @@
     .container {
       color: white;
       border: 5px solid gold;
-      display: flex;
+      display: inline-flex;
+      flex-direction: column;
     }
 
     /*
@@ -22,7 +23,10 @@ children of the .container class.
 
 each color is 100px tall
     */
-
+  .container > * {
+    flex-basis: 100px;
+  }
+  
     .red {background-color: #eb4d4b;}
     .orange {background-color: #f0932b;}
     .yellow {background-color: #f6e58d;}
