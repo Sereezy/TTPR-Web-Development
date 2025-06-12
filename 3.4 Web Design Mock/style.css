@@ -27,6 +27,15 @@ footer {
   float: right;
 }
 
+.card-container{
+  display: flex;
+}
+
+.tile-image{
+  width: 40%;
+  float: left;
+  margin-right: 45px;
+}
 
 
 
