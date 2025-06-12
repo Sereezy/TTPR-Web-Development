@@ -8,6 +8,7 @@ body {
 }
 .main {
   flex: 1;
+  display:flex
 }
 
 h1 {
@@ -19,3 +20,26 @@ footer {
   color: midnightblue;
 }
 
+.left-card{
+  float: left;
+}
+
+.right-card{
+  float:right;
+}
+
+.tile-image{
+  width: 300px;
+  height: 200px; 
+  text-wrap: wrap;
+  float:left
+}
+
+.card-title{
+  margin-left: 50px;
+  float:left
+}
+
+.logo{
+  clear:both
+}
