@@ -6,6 +6,7 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+
 .main {
   flex: 1;
 }
@@ -19,3 +20,20 @@ footer {
   color: midnightblue;
 }
 
+span {
+  color: midnightblue;
+}
+.left{
+ float: left;
+}
+.tile-image {
+  height: 200px;
+  float: left;
+  margin-right: 20px;
+}
+.right{
+  float: right;
+}
+.card{
+  width: 45%;
+}
