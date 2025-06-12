@@ -17,5 +17,37 @@ h1 {
 footer {
   text-align: right;
   color: midnightblue;
+  clear: both;
+}
+/* img { */
+/* height: 10%;
+width: 10%;
+} */
+
+.tile-image {
+  height: 200px;
+/* width: 10%; */
+float: left;
+margin-right: 50px;
+}
+
+/* .logo {
+  float: left;
+} */
+.card-title {
+  clear: right;
+}
+p {
+  clear: right;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+  /* width: 20%; */
+}
+.card {
+  width: 45%;
 }
 
