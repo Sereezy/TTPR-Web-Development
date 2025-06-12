@@ -5,6 +5,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 95vh;
+  font-size: 125%;
 }
 .main {
   flex: 1;
@@ -12,6 +13,7 @@ body {
 
 h1 {
   font-size: 5rem;
+  width:30%;
 }
 
 footer {
@@ -19,3 +21,21 @@ footer {
   color: midnightblue;
 }
 
+.right{
+  float:right;
+}
+
+.card{
+  width: 45%;
+  display:inline;
+  font-size: 2rem;
+}
+
+.tile-image{
+  float:left;
+  margin-right: 75px;
+}
+
+.left{
+  float:left;
+}
