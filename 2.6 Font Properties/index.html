@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>CSS Properties</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Edu+QLD+Hand:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <style>
     body {
       background-color: cornflowerblue;
@@ -13,19 +19,42 @@
 
     /* Don't change the CSS above, add Your CSS below. No inline css */
 
-    
+    /*1. Change the color of <p>Color</p> to "coral" color.*/
+    #color {
+      color: coral;
+    }
+    /* 2. Change the font size of <p>Font Size</p> to to 2X the size of the root (html) element. */
+    #size {
+      font-size: 3rem;
+    }
+    /* 3. Change the font weight of <p>Font Weight</p> to 900. */
+    #weight {
+      font-weight: 900;
+    }
+    /* 4. Change the font family of <p>Font Family</p> to the Google font Caveat with regular (400) font weight.
+     Link: https://fonts.google.com/specimen/Caveat */
+    #Family {
+      font-family: "Alfa Slab One", Arial;
+    }
+
+    /* 5. Change the <p>Text Align</p> to right align. */
+    #align {
+      text-align: right;
+    }
   </style>
-</head>
 
-<body>
-  <h1>Important CSS Properties</h1>
-  <p>Color</p>
-  <p>Font Size</p>
-  <p>Font Weight</p>
-  <p>Font Family</p>
-  <p>Text Align</p>
+  <body>
+    <h1>Important CSS Properties</h1>
+    1. Change the color of
+    <p>Color</p>
+    to "coral" color.
+    <p id="color">Color</p>
+    <p id="Size">Font Size</p>
+    <p id="weight">Font Weight</p>
+    <p id="Family">Font Family</p>
+    <p id="align">Text Align</p>
 
-  <!-- TODOs
+    <!-- TODOs
   1. Change the color of <p>Color</p> to "coral" color.
   2. Change the font size of <p>Font Size</p> to 2X the size of the root font size.
   3. Change the font weight of <p>Font Weight</p> to 900.
@@ -33,6 +62,5 @@
   Link: https://fonts.google.com/specimen/Caveat
   5. Change the <p>Text Align</p> to right align.
   6. Change the the root (html element) font size to 30px -->
-</body>
-
+  </body>
 </html>

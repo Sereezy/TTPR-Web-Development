@@ -21,8 +21,10 @@ footer {
 
 .tile-image {
   height: 200px;
+  width: 200px;
   float: left;
   margin-right: 50px;
+  position:absolute;
 }
 
 .card {
@@ -52,7 +54,7 @@ footer {
   }
 
   .card {
-    width: 100%;
+    width: 50%;
     display: block;
     margin-bottom: 30px;
     text-align: justify;
@@ -61,7 +63,7 @@ footer {
   .card img {
     margin-bottom: 10px;
     width: 100%;
-    display: inline;
+    display: block;
     object-fit: cover;
   }
 }
