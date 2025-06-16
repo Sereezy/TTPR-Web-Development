@@ -19,11 +19,11 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
-    
-    
-    
-    
-
+    var people = names.length;
+    var randomNumber = Math.floor(Math.random() * people )
+    var choosen = names[randomNumber];
+    var sentence = `${choosen} is buying lunch today!`
+    return sentence;
 
 /******Don't change the code below*******/    
 }

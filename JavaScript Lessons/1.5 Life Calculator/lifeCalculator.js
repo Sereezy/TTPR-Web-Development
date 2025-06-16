@@ -22,5 +22,12 @@ You have 12410 days, 1768 weeks, and 408 months left.
 */
 
 function lifeInWeeks(age){
-    
+    var yearleft = 90 - age
+    var days = yearleft*365;
+    var weeks = yearleft*52;
+    var months = yearleft*12;
+
+    console.log("You have "+days+" days, "+weeks+" weeks, and "+ months +" months left")
 }
+
+lifeInWeeks(16)
