@@ -27,7 +27,7 @@ function test() {
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
 
-
+[a, b] = [b, a];
     
 /***********Do not change the code below 👇*******/
 
