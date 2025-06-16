@@ -1,5 +1,6 @@
 /*
-In this challenge, you are going to create a function that tells us how many days, weeks and months we have left if we live until 90 years old.
+In this challenge, you are going to create a function that tells us how many days, weeks and months we have left 
+if we live until 90 years old.
 
 It will take your current age as the input and console.logs a message with our time left in this format:
 
@@ -22,5 +23,10 @@ You have 12410 days, 1768 weeks, and 408 months left.
 */
 
 function lifeInWeeks(age){
-    
+years= 90-age;
+months= years*12;
+weeks = years*52;
+days = years*365;
+console.log("You have "+days+" days, "+weeks+" weeks, and "+months+" months left.")
 }
+var remain = lifeInWeeks(89)

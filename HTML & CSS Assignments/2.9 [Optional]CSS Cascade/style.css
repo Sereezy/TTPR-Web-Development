@@ -12,13 +12,35 @@ Use only the selectors and classes provided.
 
 */
 
+<<<<<<< HEAD
+=======
+#outer-box {
+  background-color: purple;
+}
+
+>>>>>>> 9067f74 (保存本地改动)
 .box {
   background-color: blue;
   padding: 10px;
 }
 
+<<<<<<< HEAD
+=======
+.inner-box {
+  background-color: red;
+}
+
+>>>>>>> 9067f74 (保存本地改动)
 p {
   color: yellow;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
 }
+=======
+}
+
+.white-text {
+  color: white;
+}
+>>>>>>> 9067f74 (保存本地改动)

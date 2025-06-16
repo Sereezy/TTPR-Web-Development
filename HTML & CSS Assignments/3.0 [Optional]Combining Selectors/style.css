@@ -13,3 +13,25 @@ Different selector combinations can be combined for more complex targeting.
 
 It is okay to look at the solution and then try it yourself!
 */
+<<<<<<< HEAD
+=======
+h1,h2{
+    color: aqua;
+}
+.box >p.done{
+    color: blue;
+    font-size: 2rem;
+}
+.box li {
+  color: red;
+}
+li.done {
+  color: pink;
+}
+ul p.done {
+  font-size: 0.1rem;
+}
+p {
+  font-size: 5rem;
+}
+>>>>>>> 9067f74 (保存本地改动)

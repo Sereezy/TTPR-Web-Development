@@ -2,11 +2,13 @@
 BMI Calculator Challenge
 Create a BMI calculator using JavaScript functions. 
 
-The Body Mass Index (BMI) is a way of estimating the amount of body fat. It's used in medicine to calculate risk of heart disease.
+The Body Mass Index (BMI) is a way of estimating the amount of body fat. It's used in medicine to calculate risk of 
+heart disease.
 
 You can calculate it using the formula, weight(kg) divided by height squared(m^2).
 
-Your challenge is to create a function that takes weight and height as inputs and gives the calculated BMI value as an output. 
+Your challenge is to create a function that takes weight and height as inputs and gives the calculated BMI value
+ as an output. 
 The output should be rounded to the nearest whole number.
 
 The first parameter should be the weight and the second should be the height.
@@ -22,10 +24,11 @@ bmi should equal 23 when it's rounded to the nearest whole number.
 ****Math.round(number) rounds to the nearets whole number
 */
 
-function bmiCalculator(){
-
+function bmiCalculator(weight,height){
+BMI = Math.round(weight/Math.pow(height,2))
+console.log("BMI = "+BMI)
 }
-
+bmiCalculator(60,1.6)
 
 
 

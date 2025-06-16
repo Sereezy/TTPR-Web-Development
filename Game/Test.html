@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maolong Lin</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100vh; overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: white;
+  }
+  .overlay-bg {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 100%; max-width: 800px;
+    min-height: 100vh;
+    background: rgba(255,255,255,0.85);
+    padding: 40px 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+  h1 {
+    margin: 0 0 15px;
+    font-size: 36px;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .links a {
+    background: lightskyblue;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  .links a:hover {
+    background: deepskyblue;
+  }
+  .aboutme-section {
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .aboutme-section p + p {
+    margin-top: 16px;
+  }
+  .ball {
+    position: absolute;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay-bg">
+  <img src="https://cdn-icons-png.flaticon.com/512/6372/6372150.png" alt="Avatar" class="avatar" />
+  <h1>Maolong Lin</h1>
+  <div class="links">
+    <a href="./Resume-Maolong Lin.pdf">Resume</a>
+    <a href="https://www.linkedin.com/in/maolong-lin-395723228/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <section class="aboutme-section">
+    <p>I’m really into databases and backend development.</p>
+    <p>When I’m not working on that stuff, I like to relax by playing video games.</p>
+    <p>I’m studying at City Tech and taking part in the Tech Talent Pipeline Residency to get more hands-on experience.</p>
+    <p>I want to become a solid developer who builds things that both I and others can be proud of.</p>
+  </section>
+</div>
+
+<script>
+  const balls = [];
+  const images = [
+    "./Honjou Nia.jpg",
+    "./Tobiichi Origami.jpg",
+    "./Kurumi Tokisaki.png",
+    "./Himekawa Yoshino.jpg"
+  ];
+  const BALL_SIZE = 80;
+  const NUM_BALLS = 10;
+
+  function createBall(i) {
+    const ball = document.createElement('div');
+    ball.className = 'ball';
+    ball.style.backgroundImage = `url('${images[i % images.length]}')`;
+    document.body.appendChild(ball);
+    return {
+      el: ball,
+      x: Math.random() * (window.innerWidth - BALL_SIZE),
+      y: Math.random() * (window.innerHeight - BALL_SIZE),
+      dx: (Math.random() - 0.5) * 1.2,
+      dy: (Math.random() - 0.5) * 1.2,
+      size: BALL_SIZE
+    };
+  }
+
+  function dist(a, b) {
+    return Math.hypot(a.x - b.x, a.y - b.y);
+  }
+
+  for (let i = 0; i < NUM_BALLS; i++) balls.push(createBall(i));
+
+  function animate() {
+    for (let i = 0; i < balls.length; i++) {
+      const b = balls[i];
+      b.x += b.dx;
+      b.y += b.dy;
+
+      if (b.x <= 0 || b.x >= window.innerWidth - b.size) b.dx *= -1;
+      if (b.y <= 0 || b.y >= window.innerHeight - b.size) b.dy *= -1;
+
+      for (let j = i + 1; j < balls.length; j++) {
+        const b2 = balls[j];
+        if (dist(b, b2) < b.size) {
+          [b.dx, b2.dx] = [b2.dx, b.dx];
+          [b.dy, b2.dy] = [b2.dy, b.dy];
+        }
+      }
+      b.el.style.left = b.x + 'px';
+      b.el.style.top = b.y + 'px';
+    }
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+</body>
+</html>
+    
