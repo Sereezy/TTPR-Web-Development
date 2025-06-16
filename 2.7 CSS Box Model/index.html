@@ -6,13 +6,48 @@
   <title>CSS Box Model</title>
   <style>
     /* Write your CSS code here */
+    div{
+      height: 200px;
+      width: 200px;
+      
+    }
+    
 
+    p{
+      margin: 0px;
+    }
+
+    #first{
+      background-color: aqua;
+      border: 10px solid black;
+      padding: 20px;
+    }
+
+    #second{
+      background-color: darkgreen; 
+      border: solid black;
+      border-width: 20px 10px;
+      margin-left: 260px;
+    }
+
+    #third{
+      background-color: hotpink;
+      border: solid black 10px;
+      margin-left: 40px;
+    }
   </style>
 </head>
 
 <body>
 
-
+<div id="first">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+    id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+    dolor metus, laoreet ac convallis sit amet, efficitur sed dolor. </p>
+</div>
+<div id="second"></div>
+<div id="third"></div>
   <!-- TODOs:
 1. Create 3 Boxes using the div element.
 2. Set their sizes to 200px height by 200px wide.
