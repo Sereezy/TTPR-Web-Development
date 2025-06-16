@@ -11,13 +11,63 @@
     <style>
       body {
         font-family: "Sono", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-
+      .pricing-container{
+       display: flex;
+       flex-direction: row;
+       gap: 2em;
+      }
+      .pricing-plan{
+       background-color:#f2f2f2 ;
+       padding: 25px;
+       max-width: 400px;
+       border-radius: 5px;
+       display: flex;
+       flex-direction: column;
+       gap: 1em;
+      }
+      .plan-title{
+       text-align: center;
+       font-weight: bold;
+       font-size: 1.4em;
+      }
+      .plan-price{
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      }
+      .plan-features{
+        list-style: none;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+      .plan-features li{
+        text-align: center;
+      }
+      .plan-button{
+       padding: 1em;
+       border-radius: 5px;
+       background-color: #ff6600;
+       border: none;
+       color: white;
+       align-self: center;
+       justify-self: center;
+      }
       @media (max-width: 1250px) {
+        body{
+          align-self: flex-start;
+        } 
         .pricing-container {
           flex-direction: column;
           height: 100%;
         }
+
       }
     </style>
   </head>
