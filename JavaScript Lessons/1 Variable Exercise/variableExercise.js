@@ -27,6 +27,10 @@ function test() {
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
 
+    var c = b
+    b = a
+    a = c
+    
 
     
 /***********Do not change the code below 👇*******/

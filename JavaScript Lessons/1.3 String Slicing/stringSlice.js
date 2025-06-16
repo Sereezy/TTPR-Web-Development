@@ -5,6 +5,10 @@ Return the sliced input
 */
 
 
+function sliceString(words) {
+    return words.slice(0, 130)
+}
+
 
 
 

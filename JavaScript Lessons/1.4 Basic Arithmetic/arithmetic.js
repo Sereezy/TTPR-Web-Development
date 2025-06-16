@@ -10,3 +10,14 @@ Add the tax amount to the original price
 Return the total cost
 We are calculating a new value so use a return statement
 */
+
+function calculateTax(itemCost, taxAmount) {
+
+  var percenttodecimalTax = taxAmount/100  
+  var taxCost =  itemCost * percenttodecimalTax
+  var totalCost = itemCost + taxCost
+
+  return totalCost
+}
+
+console.log(calculateTax(100, 1.7))
