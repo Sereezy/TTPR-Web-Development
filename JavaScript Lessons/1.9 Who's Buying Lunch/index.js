@@ -20,9 +20,13 @@ function whosPaying(names) {
     
     //Write your code here.
     
+    var totalPeople = names.length;
     
-    
-    
+    var randomPick = Math.floor(Math.random() * totalPeople);
+
+    var unluckyPerson = names[randomPick];
+
+    return unluckyPerson;
 
 
 /******Don't change the code below*******/    

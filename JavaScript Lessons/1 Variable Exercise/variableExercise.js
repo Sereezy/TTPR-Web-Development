@@ -26,8 +26,9 @@ function test() {
     
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
-
-
+    switchVar = a;
+    a = b;
+    b = switchVar;
     
 /***********Do not change the code below 👇*******/
 
