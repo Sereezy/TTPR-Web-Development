@@ -12,8 +12,18 @@ body {
 
 h1 {
   font-size: 5rem;
+  width: 60;
 }
 
+.creative{
+  color: midnightblue;
+}
+
+.title-image{
+  float: left;
+  height: 200;
+  margin-right: 45px;
+}
 footer {
   text-align: right;
   color: midnightblue;
