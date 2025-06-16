@@ -1,0 +1,32 @@
+<!-- 
+a is 8
+b is 3
+check devtools console
+ -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1> Test </h1>
+    <script>
+        function test() {
+            function stringCount(string){
+  
+                var stringLength = string.length
+                const characterLimit = 140
+                var remainingCharacters = characterLimit - stringLength
+                
+                if (remainingCharacters > 0) {
+                    return (`There are ${stringLength} characters in ${string}. You have [${remainingCharacters}] characters remaining `)
+                }else  {
+                    return ('You are over the character limit.')
+                }
+            }
+            var originalText = "words words words"
+            var quotedText = `"${originalText}"`
+            console.log(stringCount(quotedText))
+        }
+        test()   
+    </script>
+</body>
+</html>

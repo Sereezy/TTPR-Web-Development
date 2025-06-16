@@ -23,4 +23,11 @@ You have 12410 days, 1768 weeks, and 408 months left.
 
 function lifeInWeeks(age){
     
+    const yearsLeft = 90 - age
+    const x = yearsLeft * 365
+    const y = yearsLeft * 52
+    const z = yearsLeft * 12
+    return (`You have ${x} days, ${y} weeks, and ${z} months left.`)
 }
+
+console.log(lifeInWeeks(23))

@@ -27,11 +27,14 @@ function test() {
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
 
-
+var original = a
+a = b
+b = original
     
 /***********Do not change the code below 👇*******/
 
     console.log("a is " + a);
     console.log("b is " + b);
 }
+
 test()

@@ -1,0 +1,23 @@
+<!-- 
+a is 8
+b is 3
+check devtools console
+ -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1> Test </h1>
+    <script>
+        function calculateTotal(price, taxRate) {
+            var taxAmount = price * taxRate
+            var totalCost = price + taxAmount
+            return totalCost
+        }
+        
+        var SalePrice = 30
+        var tax = .15
+        console.log(`After tax the total cost of the item will be $${calculateTotal(SalePrice,tax)}`)
+    </script>
+</body>
+</html>

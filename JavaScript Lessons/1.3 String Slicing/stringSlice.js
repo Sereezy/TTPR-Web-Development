@@ -4,9 +4,12 @@ Write a function that slices the users input to 140 characters.
 Return the sliced input
 */
 
-
-
-
+function sliceString(string){
+    const maxStringLength = 140
+    
+    var newText = string.slice(0,maxStringLength)
+    return toString(newText)
+}
 
 /* SAMPLE INPUT */
 

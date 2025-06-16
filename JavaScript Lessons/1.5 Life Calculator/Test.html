@@ -1,0 +1,24 @@
+<!-- 
+a is 8
+b is 3
+check devtools console
+ -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1> Test </h1>
+    <script>
+        function lifeInWeeks(age){
+    
+            const yearsLeft = 90 - age
+            const x = yearsLeft * 365
+            const y = yearsLeft * 52
+            const z = yearsLeft * 12
+            return (`You have ${x} days, ${y} weeks, and ${z} months left.`)
+        }
+
+        console.log(lifeInWeeks(23))
+    </script>
+</body>
+</html>
