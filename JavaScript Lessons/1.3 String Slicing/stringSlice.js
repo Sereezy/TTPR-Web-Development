@@ -3,10 +3,9 @@ Write a function that slices the users input to 140 characters.
 
 Return the sliced input
 */
-
-
-
-
+function sliceString(text){
+    return text.slice(0,140);
+}
 
 /* SAMPLE INPUT */
 
