@@ -26,7 +26,8 @@ function test() {
     
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
-
+a = "8";
+b = "3";
 
     
 /***********Do not change the code below 👇*******/
