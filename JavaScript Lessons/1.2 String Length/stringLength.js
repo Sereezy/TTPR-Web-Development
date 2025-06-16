@@ -7,3 +7,9 @@ Twitter use to have a character count limit of 140.
   The function should return a message in this format:
   " There are [stringLength] characters in [text]. You have [140 - stringLength] characters remaining "
 */
+function stringCount(text) {
+  var charsRemaining = 140 - text.length
+  var message = `There are ${stringCount} characters in ${text}. You have ${charsRemaining} characters remaining`
+  console.log(message)
+}
+stringCount('Hello')
