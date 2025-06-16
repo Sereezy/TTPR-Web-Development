@@ -3,7 +3,7 @@
 var greeting = "Hello"
 var recipient = "World" 
 
-console.log(greeting + recipient)
+console.log(greeting +  "    "  + recipient)
 
 console.log('${greeting} ${recipient}')
 
