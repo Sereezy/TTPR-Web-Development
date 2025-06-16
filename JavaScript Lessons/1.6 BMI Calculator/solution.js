@@ -34,11 +34,9 @@ Solution below
 Solution below
 */
 
-
-function stringCount(text){
-    var remainingChars = 140 - text.length
-    var message = `There are ${text.length} characters in ${text}. You have ${remainingChars} remaining`
-    console.log(message)
+function bmiCalculator(weight, height){
+    var bmi = Math.round(weight / Math.pow(height, 2))
+    return bmi
 }
 
-stringCount("Hello")
+console.log(bmiCalculator(60, 1.6))

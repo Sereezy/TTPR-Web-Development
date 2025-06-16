@@ -34,11 +34,21 @@ Solution below
 Solution below
 */
 
-
-function stringCount(text){
-    var remainingChars = 140 - text.length
-    var message = `There are ${text.length} characters in ${text}. You have ${remainingChars} remaining`
-    console.log(message)
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "Leap year.";
+      } else {
+        return "Not leap year.";
+      }
+    } else {
+      return "Leap year.";
+    }
+  } else {
+    return "Not leap year.";
+  }
 }
-
-stringCount("Hello")
+console.log(isLeapYear(2000));
+console.log(isLeapYear(2400));
+console.log(isLeapYear(1989));

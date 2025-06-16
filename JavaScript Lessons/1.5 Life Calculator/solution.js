@@ -34,11 +34,13 @@ Solution below
 Solution below
 */
 
+function lifeInWeeks(age){
+    var yearsRemaining = 90 - age;
+    var monthsRemaining = yearsRemaining * 12;
+    var weeksRemaining = yearsRemaining * 52;
+    var daysRemaining = yearsRemaining * 365;
 
-function stringCount(text){
-    var remainingChars = 140 - text.length
-    var message = `There are ${text.length} characters in ${text}. You have ${remainingChars} remaining`
-    console.log(message)
+    console.log(`You have ${daysRemaining} days, ${weeksRemaining} weeks, and ${monthsRemaining} months`)
 }
 
-stringCount("Hello")
+lifeInWeeks(56)
