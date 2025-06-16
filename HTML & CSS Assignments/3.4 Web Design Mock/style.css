@@ -1,0 +1,65 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #FAF9F6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  font-size: 125%;
+}
+.main {
+  flex: 1;
+}
+h1 {
+  font-size: 5rem;
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
+  width:30%;
+=======
+  width: 60%;
+}
+.creative {
+  color: midnightblue;
+}
+–
+.tile-image{
+  float: left;
+  height: 200px;
+  margin-right: 45px;
+}
+.card {
+  width: 47%;
+}
+.left {
+  float:left ;
+}
+.right{
+  float: right;
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css
+}
+footer {
+  text-align: right;
+  color: midnightblue;
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
+}
+
+.right{
+  float:right;
+}
+
+.card{
+  width: 45%;
+  display:inline;
+  font-size: 2rem;
+}
+
+.tile-image{
+  float:left;
+  margin-right: 75px;
+}
+
+.left{
+  float:left;
+}
+=======
+}
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css
