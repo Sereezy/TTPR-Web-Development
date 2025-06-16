@@ -6,12 +6,39 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+
+.logo {
+  width: 275px;
+  padding-bottom: 50px;
+}
+
+img {
+ width: 350px;
+ margin-top: 15px;
+}
+
 .main {
   flex: 1;
 }
 
 h1 {
   font-size: 5rem;
+  margin: 5px;
+  
+}
+
+.tile-image {
+  float: left;
+  margin-right: 15px;
+
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
 }
 
 footer {
@@ -19,3 +46,12 @@ footer {
   color: midnightblue;
 }
 
+
+
+.violetPurple {
+  color: blueviolet;
+}
+
+.card {
+  width: 50%;
+}

@@ -11,11 +11,61 @@
     <style>
       body {
         font-family: "Sono", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .pricing-container {
+        display: flex;
+        justify-content: space-around;
+        height: 100vh;
+        overflow: hidden;
+        align-items: center;
+        gap: 15px;
+        margin: 0 50px;
+      }
+
+      .pricing-plan {
+         background-color:azure;
+         display: flex;
+         flex-direction: column;
+         width: 350px;
+         height: 350px;
+         flex-grow: 1;
+      }
+
+      .plan-price {
+        text-align: center;
+      }
+      
+
+      .plan-title {
+        text-align: center;
+      }
+
+      .plan-button {
+        align-self: center;
+        padding: 10px 6px;
+        background-color: orange;
+        color: white;
+        border-radius: 5px;
+        border : none;
+      }
+
+      .plan-title {
+        font-size: large;
+        font-weight: 700;
+        padding-top: 15px
+      }
+
+      .plan-price {
+        font-size: 50px;
       }
 
       @media (max-width: 1250px) {
         .pricing-container {
           flex-direction: column;
+          width: 100%;
           height: 100%;
         }
       }
