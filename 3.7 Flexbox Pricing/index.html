@@ -13,12 +13,58 @@
         font-family: "Sono", sans-serif;
       }
 
-      @media (max-width: 1250px) {
+      @media (min-width: 1250px) {
         .pricing-container {
-          flex-direction: column;
+          display: flex;
+          flex-direction: row;
           height: 100%;
+          width: 80%;
+          background-color: beige;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+          margin-top: 20%;
+          
+        }  
+        .pricing-plan{
+          text-align: center;
+          margin-right: 40px;
+          background-color: aqua;
+          justify-content: center;
+          width: 350px;  
+          padding: 30px 30px;  
+          margin-left: 10px;      
+        }
+        .plan-title{
+          font-weight: 800 ;
+        }
+        .plan-price{
+          font-weight: 800;
+          font-size: x-large;
+        }
+
+        li{
+          list-style: none;
+        }
+        .plan-features{
+          text-align: center;
+          text-indent: 0%;
+          margin-left: 0%;
+          padding-left: 0%;
+              }
+        .plan-features li{
+          margin-top: 10px;
+          
+        }
+        .plan-button{
+          background-color: orange;
+          border: none;
         }
       }
+
+    
+
+
     </style>
   </head>
 
