@@ -3,4 +3,6 @@
 var greeting = "Hello"
 var recipient = "World"
 
+console.log(greeting + " " + recipient)
+
 console.log("answer goes here")

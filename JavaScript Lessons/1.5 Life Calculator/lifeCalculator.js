@@ -15,12 +15,19 @@ Example Input
 
 e.g. If you are 56 years old:
 
-lifeInWeeks(56)
+lifeInWeek s(56)
 Example Output
 
 You have 12410 days, 1768 weeks, and 408 months left.
 */
 
-function lifeInWeeks(age){
-    
+function lifeInWeeks(age) {
+    var yearsRemaining = 90 - age;
+    var monthsRemaining = yearsRemaining * 12;
+    var weeksRemaining = yearsRemaining * 52;
+    var daysRemaining = yearsRemaining * 365;
+
+    console.log(`You have ${daysRemaining} days, ${weeksRemaining} weeks, and ${monthsRemaining} months left.`);
 }
+
+lifeInWeeks(56);
