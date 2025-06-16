@@ -10,3 +10,10 @@ Add the tax amount to the original price
 Return the total cost
 We are calculating a new value so use a return statement
 */
+function calculateTotal(price, taxRate){
+    tax = price * (taxRate / 100);
+    total = price + tax;
+    return total;
+}
+var total = calculateTotal(100, 8);
+console.log(total)
