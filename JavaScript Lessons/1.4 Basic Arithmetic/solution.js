@@ -34,11 +34,10 @@ Solution below
 Solution below
 */
 
-
-function stringCount(text){
-    var remainingChars = 140 - text.length
-    var message = `There are ${text.length} characters in ${text}. You have ${remainingChars} remaining`
-    console.log(message)
+function calculateTotal(price, taxRate){
+    tax = price * (taxRate / 100);
+    total = price + tax;
+    return total;
 }
-
-stringCount("Hello")
+var total = calculateTotal(100, 8);
+console.log(total)

@@ -34,8 +34,9 @@ Solution below
 Solution below
 */
 
-//Concatenate the strings below to say "Hello World"
 var greeting = "Hello"
-var addressee = "World"
+var recipient = "World"
 
-console.log(greeting, " ", addressee)
+console.log(greeting + " " + recipient)
+//or
+console.log(`${greeting} ${recipient}`)
