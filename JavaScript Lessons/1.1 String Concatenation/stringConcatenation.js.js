@@ -1,6 +1,9 @@
 //Concatenate the strings below to say "Hello World" 
 
 var greeting = "Hello"
-var recipient = "World"
+var recipient = "World" 
 
-console.log("answer goes here")
+console.log(greeting + recipient)
+
+console.log('${greeting} ${recipient}')
+
