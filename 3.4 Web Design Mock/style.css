@@ -6,6 +6,9 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+
+
+
 .main {
   flex: 1;
 }
@@ -14,8 +17,33 @@ h1 {
   font-size: 5rem;
 }
 
-footer {
-  text-align: right;
+.creative {
   color: midnightblue;
 }
 
+.tile-image {
+  float: left;
+  height: 200px;
+  margin-right: 50px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.footer {
+  text-align: right;
+ }
+
+ img {
+  height: 250px;
+  width: 250px;
+ }
+
+ .card {
+  width: 50%;
+ }
