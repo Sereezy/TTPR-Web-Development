@@ -13,34 +13,21 @@ h1 {
   font-size: 5rem;
   width: 60%;
 }
-<<<<<<< HEAD:3.4 Web Design Mock/style.css
 
 #word {
   color: midnightblue;
 }
 
-=======
-.creative {
-  color: midnightblue;
-}
-–
->>>>>>> origin/main:HTML & CSS Assignments/3.4 Web Design Mock/style.css
 .tile-image{
   float: left;
   height: 200px;
   margin-right: 45px;
 }
-<<<<<<< HEAD:3.4 Web Design Mock/style.css
 
 .card {
   width: 47%;
 }
 
-=======
-.card {
-  width: 47%;
-}
->>>>>>> origin/main:HTML & CSS Assignments/3.4 Web Design Mock/style.css
 .left {
   float:left ;
 }
