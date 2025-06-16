@@ -22,3 +22,11 @@ p {
   margin: 0;
   padding: 0;
 }
+
+.white-text{
+  color : white;
+}
+
+#outer-box{
+  background-color: purple;
+}
