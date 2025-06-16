@@ -18,4 +18,25 @@ footer {
   text-align: right;
   color: midnightblue;
 }
+.tile-image{
+  height: 200px;
+  float: left; 
+  margin-right: 50px;
+}
 
+.left{
+  float: left;
+  margin-right: 900px;
+  display: block;
+ 
+}
+.right{
+  float: right;
+  display: block;
+  margin-left: 700px;
+  margin-top: -200px;
+ 
+}
+.class{
+  color: midnightblue;
+}
