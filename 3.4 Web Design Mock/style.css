@@ -14,8 +14,32 @@ h1 {
   font-size: 5rem;
 }
 
+
 footer {
   text-align: right;
   color: midnightblue;
 }
 
+.blue{
+  color: midnightblue;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.card{
+
+  width: 45%;
+}
+
+.tile-image{
+  float: left;
+  margin-right: 50px;
+  height: 200px;
+  
+}
