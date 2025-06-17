@@ -66,3 +66,7 @@ function fibonacciGenerator(n) {
 
   return fibArray;
 }
+
+ console.log(fibonacciGenerator(3)) ; // Output: [0, 1, 1]
+//console.log(fibonacciGenerator(5)); // Output: [0, 1, 1, 2, 3]
+//console.log(fibonacciGenerator(0)); // Output: []       
