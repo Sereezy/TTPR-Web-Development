@@ -8,7 +8,7 @@ function sliceString(text){
     return text.slice(0,140)
 }
 
-
+console.log(sliceString("HEllo"))
 
 /* SAMPLE INPUT */
 
