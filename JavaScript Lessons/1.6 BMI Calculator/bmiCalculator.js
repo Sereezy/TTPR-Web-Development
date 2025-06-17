@@ -32,4 +32,16 @@ console.log(bmiCalculator(60, 1.6))
 
 
 
+
+
+
+
+
+
+
+
 /* BMI CALCULATOR PART 2*/
+
+function rollDie(){
+    return Math.floor(Math.random() * 6) +1;
+}
