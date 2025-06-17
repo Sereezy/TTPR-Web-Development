@@ -3,4 +3,4 @@
 var greeting = "Hello"
 var recipient = "World"
 
-console.log("answer goes here")
+console.log(greeting+ " "+recipient)
