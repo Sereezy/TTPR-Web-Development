@@ -40,3 +40,32 @@ Example Input 2
 Example Output 2
 Not leap year.
 */
+
+function leapYearOrNah(year){
+    function isInteger(num) {
+        return num % 1 === 0;
+    }
+    if (typeof(year) != 'number' || !isInteger(year)){
+        return ('Invalid input, please enter a valid year.')
+    }
+    if (isInteger(year / 4) && (!isInteger(year / 100) || isInteger(year / 400))) {
+        return (`${year} is a leap year!`)
+    } else {
+        return (`${year} is not a leap year.`)
+    }
+}
+
+function theNextLeapYear(){
+    const year = 2025
+    let nextYear = year + 1
+
+    while (true) {
+        let result = leapYearOrNah(nextYear)
+        if (result.includes("is a leap year")) {
+            return `The next leap year is ${nextYear}`
+        }
+        nextYear++
+    }
+}
+
+console.log(theNextLeapYear())

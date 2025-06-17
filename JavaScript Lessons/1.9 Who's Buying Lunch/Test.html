@@ -1,0 +1,25 @@
+<!-- Dev console in browser -->
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1> Test </h1>
+    <script>
+        function whosPaying(names) {
+    
+        /******Don't change the code above*******/
+            
+            //Write your code here.
+            
+            names.sort(() => Math.random() - 0.5);
+            
+            return (`${names.pop()} is going to buy lunch today!`)
+
+
+        /******Don't change the code below*******/    
+        }
+
+        var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
+        console.log(whosPaying(people))
+    </script>
+</body>
+</html>
