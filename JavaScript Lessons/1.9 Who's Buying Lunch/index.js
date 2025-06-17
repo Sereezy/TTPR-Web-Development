@@ -14,11 +14,25 @@ Michael is going to buy lunch today!
 NOTE: Think about how we calculate a random number selected on a dice
 */
 
-function whosPaying(names) {
+function whosPaying(names) {  
     
 /******Don't change the code above*******/
     
     //Write your code here.
+
+    function whosPaying(names) {      
+            
+            var numberOfPeople = names.length
+            var randomPostion = Math.floor(Math.random() * numberOfPeople) //Math.Random returns number between 0 & 1 
+            var randomPerson = names[randomPostion]
+            
+            return `${randomPerson} is going to buy lunch today!`
+        
+          
+        }
+        
+        var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
+        console.log(whosPaying(people))
     
     
     
