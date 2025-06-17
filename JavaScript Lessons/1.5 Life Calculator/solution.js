@@ -43,4 +43,4 @@ function lifeInWeeks(age){
     console.log(`You have ${daysRemaining} days, ${weeksRemaining} weeks, and ${monthsRemaining} months`)
 }
 
-lifeInWeeks(56)
+lifeInWeeks(56) 
