@@ -10,3 +10,10 @@ Add the tax amount to the original price
 Return the total cost
 We are calculating a new value so use a return statement
 */
+
+function calculateTotal(cost, percentage) {
+  afterTax = cost * (1 + percentage);
+  return afterTax.toFixed(2);
+}
+
+console.log(calculateTotal(999, 0.08875));

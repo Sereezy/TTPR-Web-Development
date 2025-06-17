@@ -21,6 +21,12 @@ Example Output
 You have 12410 days, 1768 weeks, and 408 months left.
 */
 
-function lifeInWeeks(age){
-    
+function lifeInWeeks(age) {
+  day = (90 - age) * 365;
+  week = (90 - age) * 52;
+  month = (90 - age) * 12;
+  ``;
+  life = `You have ${day} days, ${week} weeks, and ${month} months left.`;
+  return life;
 }
+console.log(lifeInWeeks(27));

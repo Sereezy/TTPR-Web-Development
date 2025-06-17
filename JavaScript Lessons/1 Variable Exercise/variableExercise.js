@@ -21,17 +21,17 @@ You are NOT allowed to type any numbers.
 You should NOT redeclare the variables a and b.
 */
 function test() {
-    var a = "3";
-    var b = "8";
-    
-/***********Do not change the code above 👆*******/
-//Write your code on lines 29 - 31:
+  var a = "3";
+  var b = "8";
 
+  /***********Do not change the code above 👆*******/
+  //Write your code on lines 29 - 31:
+  c = a;
+  a = b;
+  b = c;
+  /***********Do not change the code below 👇*******/
 
-    
-/***********Do not change the code below 👇*******/
-
-    console.log("a is " + a);
-    console.log("b is " + b);
+  console.log("a is " + a);
+  console.log("b is " + b);
 }
-test()
+test();
