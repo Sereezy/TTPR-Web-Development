@@ -19,11 +19,11 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
+    var numberOfPeople = names.length;
+    var randomPosition = Math.floor(Math.random() * numberOfPeople); // Math.Random returns
+    var randomPerson = names[randomPosition];
     
-    
-    
-    
-
+    return `${randomPerson} is going to buy lunch today!`
 
 /******Don't change the code below*******/    
 }

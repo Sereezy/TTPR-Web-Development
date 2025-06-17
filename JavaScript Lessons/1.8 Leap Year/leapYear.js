@@ -40,3 +40,23 @@ Example Input 2
 Example Output 2
 Not leap year.
 */
+
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "This Is A Leap Year.";
+      } else {
+        return "This Is Not A Leap Year.";
+      }
+    } else {
+      return "This Is A Leap Year.";
+    }
+  } else {
+    return "This Is Not Leap Year.";
+  }
+}
+
+console.log(isLeapYear(2000)); // Leap year.
+console.log(isLeapYear(2400)); // Leap year.
+console.log(isLeapYear(1989)); // Not Leap Year.
