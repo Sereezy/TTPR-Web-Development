@@ -15,18 +15,18 @@ NOTE: Think about how we calculate a random number selected on a dice
 */
 
 function whosPaying(names) {
-    
-/******Don't change the code above*******/
-    
-    //Write your code here.
-    
-    
-    
-    
+  /******Don't change the code above*******/
 
+  //Write your code here.
 
-/******Don't change the code below*******/    
+  var number = names.length;
+  var randomPosition = Math.floor(Math.random() * number);
+  var randomPeople = names[randomPosition];
+
+  return `${randomPeople} will buy lunch today`;
+
+  /******Don't change the code below*******/
 }
 
-var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
-console.log(whosPaying(people))
+var people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"];
+console.log(whosPaying(people));
