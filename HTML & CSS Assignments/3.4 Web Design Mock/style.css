@@ -1,7 +1,7 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 50px 50px 0 50px;
-  background-color: #faf9f6;
+  background-color: #FAF9F6;
   display: flex;
   flex-direction: column;
   min-height: 95vh;
@@ -9,11 +9,28 @@ body {
 .main {
   flex: 1;
 }
-
 h1 {
   font-size: 5rem;
+  width: 60%;
 }
-
+.creative {
+  color: midnightblue;
+}
+–
+.tile-image{
+  float: left;
+  height: 200px;
+  margin-right: 45px;
+}
+.card {
+  width: 47%;
+}
+.left {
+  float:left ;
+}
+.right{
+  float: right;
+}
 footer {
   text-align: left;
   color: midnightblue;
@@ -24,6 +41,7 @@ img {
 }
 .creative {
   color: midnightblue;
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
 }
 
 .tile-image {
@@ -43,3 +61,6 @@ img {
 .right {
   float: right;
 }
+=======
+}
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css
