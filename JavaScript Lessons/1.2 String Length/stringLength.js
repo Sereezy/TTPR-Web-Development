@@ -8,3 +8,11 @@ Twitter use to have a character count limit of 140.
   " There are [stringLength] characters in [text]. You have [140 - stringLength] characters remaining "
 */
 
+function count(str){
+  var left = 140 - str.length
+  console.log(
+  ` There are ${str.length} characters in ${str}. You have ${left} characters remaining `
+  )
+}
+var s = "Hello my world"
+count(s)
