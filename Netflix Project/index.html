@@ -4,14 +4,24 @@
     <title>Netflix</title>
     <style>
         body{
+            margin: 0;
+            padding: 0;
+            /* fill up bg */
+        }
+        .top-section{
             background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.6)) ,url(Netflix_bg.jpg);
+            /* bg and make it darker */
             background-size: cover;
         }
+        .bottom-section {
+            background: #000;
+        }
+
         .Icon{
             text-align: left;
             color: red;
             font-size: 43px;
-            margin-top: -1px;
+            margin-top:-1px;
             padding-left: 130px;
             font-weight: 900;
         }
@@ -30,14 +40,26 @@
             font-size: 20px;
             margin-bottom: 40px;
         }
+        .Text_4{
+            color: white;
+            background-color:#16003b;
+            height: 60px;
+            width: 1100px;
+            padding: 10px;
+            padding-left: 30px;
+            margin-left: 250px;
+            border-radius: 30px;
+            margin-top: -90px;
+            margin-bottom: 80px;
+        }
         .Header{
             text-align: right;
             font-size: 40px;
             padding-right: 140px;
-            padding-bottom: 55  px;
+            padding-bottom: 55px;
             padding-left: 90px;  
             margin-top: -100px;
-            margin-bottom: 180px;
+            margin-bottom: 140px;
             
         }
         #Language{
@@ -60,14 +82,89 @@
         }
         .email{
             color: red;
-            
+            text-align: center;
+            margin-top: 10px;
         }
-        #email{
-            color: red;
-            
+        input[type="submit"]{
+            color:  white;
+            background-color: red;
+            border-radius: 10px;
+            padding: 13px 30px;
+            font-size: 25px;
+            font-weight: 700;
+         }
+        input[type="email"]{
+            color:  white;
+            background: #00000082;
+            border-radius: 10px;
+            padding: 20px 70px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 200px;
+         }
+         .popcorn{
+            margin-left: 150px;
+            margin-top: 30px;
+         }
+        .LearnMore{
+            background-color: rgb(106, 105, 105);
+            color: white;
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-weight: bold;
+            font-size: 17px;
+            margin-left: 940px;
+            margin-top: 10px;
         }
+        .Text_4 > p{
+            margin-top: -50px;
+        }
+        .Movies > p{
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            margin-left: 170px;
+        }
+        .movie_img img{
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(135, 135, 135, 0.299);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 40px;
+            height: 150px;
+        }
+
+        .left-button {
+            left: 10px;
+        }
+
+        .right-button {
+            right: 10px;
+        }
+        .carousel {
+            position: relative;
+            width: 80%;
+            margin: 50px auto;
+            overflow: hidden;
+            }
+        .carousel-track {
+            display: flex;
+            scroll-behavior: smooth;
+            overflow-x: auto;
+            scrollbar-width: none;
+            }
+        
     </style>
     <body>
+        <div class="top-section">
         <p class="Icon">NETFLIX</p>
     <div class="Header">   
         <select name="Language" id="Language">
@@ -84,9 +181,50 @@
     </div>
     <div class="email">
     <form>
-        <input type="email" id="email" name="email">
-        <input type="submit" value="GetStarted">
+        <input type="email" id="email" name="email" placeholder="Email address" >
+        <input type="submit" value="GetStarted  >">
     </form>
+    </div>
+    </div>
+    <div class="bottom-section">
+        <img class="popcorn" src="./popcorn_icon.png" width=80px>
+        <div class="Text_4">
+            <button class="LearnMore">Learn More</button>
+            <p><span style="font-size: 18px;"><b>The Netflix you love for just $7.99.</b></span> 
+                <br>Get our most affordable, ad-supported plan.</p>
+        </div>
+        <div class="Movies">
+            <p>Trending Now</p>
+            <div class="carousel">
+                <button class="carousel-button left-button" onclick="scrollCarousel(-1)">‹</button>
+                <div class="carousel-track" id="carousel">
+                <div class="movie_img"><img src="./popcorn_icon.png"></div>
+                <div class="movie_img"><img src="./Netflix_Icon.jpg"></div>
+                <div class="movie_img"><img src="./popcorn_icon.png"></div>
+                <div class="movie_img"><img src="./Netflix_Icon.jpg"></div>
+                <div class="movie_img"><img src="./popcorn_icon.png"></div>
+                <div class="movie_img"><img src="./Netflix_Icon.jpg"></div>
+                <div class="movie_img"><img src="./popcorn_icon.png"></div>
+                <div class="movie_img"><img src="./Netflix_Icon.jpg"></div>
+                <div class="movie_img"><img src="./popcorn_icon.png"></div>
+                <div class="movie_img"><img src="./Netflix_Icon.jpg"></div>
+                <div class="movie_img"><img src="./popcorn_icon.png"></div>
+                <div class="movie_img"><img src="./Netflix_Icon.jpg"></div>
+                </div>
+                <button class="carousel-button right-button" onclick="scrollCarousel(1)">›</button>
+            </div>
+        </div>
+        <script>
+    const carousel = document.getElementById('carousel');
+    const itemWidth = 310; 
+
+    function scrollCarousel(direction) {
+      carousel.scrollBy({
+        left: direction * itemWidth, 
+        behavior: 'smooth'          
+      });
+    }
+  </script>
     </div>
     
 </body>
