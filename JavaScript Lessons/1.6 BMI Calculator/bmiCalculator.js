@@ -33,3 +33,11 @@ console.log(bmiCalculator(81,1.85))
 
 
 /* BMI CALCULATOR PART 2*/
+
+
+function rolldie() {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+  
+  console.log("Rolled:", rolldie());
+  
