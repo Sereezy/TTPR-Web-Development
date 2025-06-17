@@ -40,3 +40,15 @@ Example Input 2
 Example Output 2
 Not leap year.
 */
+function leapYear(year){
+    if (year % 4 === 0){
+        return (`${year} is a leap year.`)
+    }
+    if (year % 100 === 0){
+        return (`${year} is NOT a leap year.`)
+    }
+    if (year % 400 === 0){
+        return (`${year} is a leap year.`)
+    }
+}
+console.log(leapYear(1989))
