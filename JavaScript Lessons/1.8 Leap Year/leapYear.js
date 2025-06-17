@@ -40,3 +40,9 @@ Example Input 2
 Example Output 2
 Not leap year.
 */
+function leapyear (year) {
+    var leapyear = year;
+    if (leapyear % 4 === 0 );
+    if 
+
+}
