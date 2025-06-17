@@ -3,7 +3,11 @@ Write a function that slices the users input to 140 characters.
 
 Return the sliced input
 */
-
+function sliceString(inputWeather){
+let start=0;
+let finish= 140;
+return inputWeather.slice(start, finish)
+}
 
 
 
