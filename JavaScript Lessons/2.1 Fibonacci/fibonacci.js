@@ -37,3 +37,14 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+function fibonacciGenerator(number) 
+{
+    var sequence = [0,1]
+    for ( i = 1 ; i < number-1 ; i++)
+    {
+        sequence.push(sequence[i-1]+sequence[i])
+        // console.log(sequence[i])
+    }
+    return sequence
+}
+console.log(fibonacciGenerator(0))
