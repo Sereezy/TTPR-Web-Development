@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../OneDrive/Desktop/bootcamp website"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bootcamp website"
+	}
+}

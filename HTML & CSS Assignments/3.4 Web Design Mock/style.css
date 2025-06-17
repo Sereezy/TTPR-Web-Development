@@ -1,7 +1,12 @@
 body {
   font-family: "Poppins", sans-serif;
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
   margin: 50px;
   background-color: #faf9f6;
+=======
+  margin: 50px 50px 0 50px;
+  background-color: #FAF9F6;
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css
   display: flex;
   flex-direction: column;
   min-height: 95vh;
@@ -10,8 +15,8 @@ body {
 .main {
   flex: 1;
 }
-
 h1 {
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
   font-size: 3.5rem;
   color: #2a2a2a;
   margin-bottom: 40px;
@@ -61,11 +66,38 @@ h1 {
 .logo {
   width: 150px;
   margin-bottom: 30px;
+=======
+  font-size: 5rem;
+  width: 60%;
 }
-
+.creative {
+  color: midnightblue;
+}
+–
+.tile-image{
+  float: left;
+  height: 200px;
+  margin-right: 45px;
+}
+.card {
+  width: 47%;
+}
+.left {
+  float:left ;
+}
+.right{
+  float: right;
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css
+}
 footer {
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
   text-align: center;
   color: rgb(184, 10, 10);
   margin-top: 100px;
   font-weight: bold;
 }
+=======
+  text-align: right;
+  color: midnightblue;
+}
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css
