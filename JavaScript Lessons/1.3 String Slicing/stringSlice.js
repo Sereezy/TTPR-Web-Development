@@ -4,6 +4,10 @@ Write a function that slices the users input to 140 characters.
 Return the sliced input
 */
 
+function slicedString(text) {
+    return text.slice(0,140)
+}
+
 
 
 
@@ -14,7 +18,7 @@ Return the sliced input
 const sentence = "JavaScript lets you create websites and solve real-world problems. Practice regularly to improve. Keep learning, stay curious, and enjoy the coding journey every day.";
 
 // Save the returned string from the function
-var slicedString = sliceString(sentence);
+var slicedString = slicedString(sentence);
 
 // Log the sliced result to confirm that the string was trimmed
 console.log(slicedString);
