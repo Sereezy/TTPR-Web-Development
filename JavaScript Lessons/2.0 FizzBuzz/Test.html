@@ -1,0 +1,28 @@
+<!-- Dev console in browser -->
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1> Test </h1>
+    <script>
+        function fizzBuzz() {
+            var originalNumber = 1
+            while (originalNumber <= 100){
+                if (originalNumber % 3 === 0 && originalNumber % 5 === 0) {
+                    console.log('FizzBuzz')
+                
+                } else if (originalNumber % 3 === 0) {
+                    console.log('Fizz')
+                } else if (originalNumber % 5 === 0) {
+                    console.log('Buzz')
+                }
+                else {
+                    console.log(`${originalNumber}`)
+                }
+                originalNumber++
+            }
+        }
+
+        fizzBuzz()
+    </script>
+</body>
+</html>

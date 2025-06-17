@@ -37,3 +37,18 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+
+function fibonacciGenerator(n){
+    let array = []
+    
+    var lastNumber
+    for (let i = 0; i < n; i=i+lastNumber) {
+        array.push(i)
+        lastNumber = i
+    }
+
+    console.log(array)
+}
+
+let number = 3
+fibonacciGenerator(number)

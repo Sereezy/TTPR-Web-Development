@@ -10,9 +10,10 @@
             
             //Write your code here.
             
-            names.sort(() => Math.random() - 0.5);
+            let listLength = names.length
+            let picker = Math.floor(Math.random() * listLength)
             
-            return (`${names.pop()} is going to buy lunch today!`)
+            return (`${names[picker]} is going to buy lunch today!`)
 
 
         /******Don't change the code below*******/    

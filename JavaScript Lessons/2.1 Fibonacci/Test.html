@@ -1,0 +1,29 @@
+<!-- Dev console in browser -->
+<!DOCTYPE html>
+<html>
+    <body>
+    <h1> Test </h1>
+    <script>
+        function fibonacciGenerator(n){
+            n = Math.floor(n)
+            let array = []
+            
+            if (n == 1) {
+                array = [0]
+            } else if (n == 2) {
+                array = [0,1]
+            } else {
+                array = [0,1,]
+                for (let i = 2; i < n; i++) {
+                    array.push[(array[array.length - 2]) + array[array.length -1]]
+                }
+            }
+
+            console.log(n)
+        }
+
+        let number = 10
+        fibonacciGenerator(number)
+    </script>
+</body>
+</html>
