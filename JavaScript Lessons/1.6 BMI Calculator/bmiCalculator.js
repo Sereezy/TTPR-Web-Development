@@ -22,9 +22,13 @@ bmi should equal 23 when it's rounded to the nearest whole number.
 ****Math.round(number) rounds to the nearets whole number
 */
 
-function bmiCalculator(){
-
+function bmiCalculator(weight, height){
+    var BMI = Math.round(weight / Math.pow(height, 2));
+    var message = `Your BMI is ${BMI}`
+    return message;
 }
+
+console.log(bmiCalculator(60,1.6))
 
 
 

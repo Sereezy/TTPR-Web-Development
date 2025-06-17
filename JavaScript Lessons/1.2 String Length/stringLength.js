@@ -7,3 +7,10 @@ Twitter use to have a character count limit of 140.
   The function should return a message in this format:
   " There are [stringLength] characters in [text]. You have [140 - stringLength] characters remaining "
 */
+
+function characterLimit(youreText) {
+  var charlimit = `There are ${youreText.length} characters in [${youreText}]. You have ${140 - youreText.length} characters remaining.`
+  console.log(charlimit)
+}
+
+characterLimit("Random words to test code")

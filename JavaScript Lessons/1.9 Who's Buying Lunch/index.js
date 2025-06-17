@@ -19,14 +19,16 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
-    
-    
-    
-    
+    var peopleNum = names.length
+    var paying = Math.floor(Math.random() * peopleNum)
+    var payer = names[paying]
+    var message = `${payer} is going to buy lunch today`
+    return message;
+}
 
 
 /******Don't change the code below*******/    
-}
+
 
 var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
 console.log(whosPaying(people))
