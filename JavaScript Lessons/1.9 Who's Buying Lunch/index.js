@@ -19,12 +19,10 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
-    
-    
-    
-    
-
-
+    var numberOfPeople = names.length;  //counts how many people are in the array aka how many elements
+    var randomIndex = Math.floor(Math.random() * numberOfPeople); //chooses random number between 0 and the number of people - 1, then rounds 
+    var personPaying = names[randomIndex]; 
+    return `${personPaying} is going to buy lunch today!!`
 /******Don't change the code below*******/    
 }
 
