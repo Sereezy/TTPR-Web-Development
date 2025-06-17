@@ -37,3 +37,15 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+
+
+function fibonacciGenerator(num){
+    sequence = [0, 1]
+    for (i = 2; i < num; i++){
+        sequence[i] = sequence[i-1] + sequence[i-2]
+        sequence[i].append
+    }
+    return sequence
+}
+
+console.log(fibonacciGenerator(7))
