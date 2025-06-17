@@ -23,7 +23,9 @@ You should NOT redeclare the variables a and b.
 function test() {
     var a = "3";
     var b = "8";
-    
+   var c = a;
+  a = b;
+  b = c;
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
 
