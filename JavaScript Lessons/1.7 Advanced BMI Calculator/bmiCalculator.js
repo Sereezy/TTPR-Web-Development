@@ -11,8 +11,7 @@ BMI 18.5-24.9, the output should be "Your BMI is <bmi>, so you have a normal wei
 BMI >24.9, the output should be "Your BMI is <bmi>, so you are overweight."
 */
 function bmiCalculator(weight, height){
-    var bmi = weight/Math.pow(height, 2);
-    bmi = Math.round(bmi);
+    var bmi = Math.round(weight/Math.pow(height, 2));
 
     console.log(bmiResults(bmi));
 }
