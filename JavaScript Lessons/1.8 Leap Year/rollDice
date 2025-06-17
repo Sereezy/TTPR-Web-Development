@@ -1,0 +1,7 @@
+function rollDice() {
+   var diceroll = Math.random((1) * 6 + 1)
+
+    return Math.round(diceroll)
+}
+
+console.log(rollDice())

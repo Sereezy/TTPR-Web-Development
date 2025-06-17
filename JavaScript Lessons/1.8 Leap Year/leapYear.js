@@ -40,3 +40,13 @@ Example Input 2
 Example Output 2
 Not leap year.
 */
+
+function leapYear(year) {
+    if (year%4 === 0 && year%400 === 0 && !year%100 === 0)  {
+        console.log("It is a leap year.")
+    }  else {
+        console.log("It is not a leap year.")
+    }
+}
+
+leapYear(1989)
