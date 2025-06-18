@@ -16,3 +16,12 @@ document.querySelectorAll("#list .item")[1].style.color = "purple"
 document.querySelector("a").attributes
 document.querySelector("a").getAttribute("href");
 document.querySelector("a").setAttribute("href", "https://www.linkedin.com");
+
+// document.querySelector(".btn").setAttribute.classList.toggle("backgroundtoggle")
+
+var button = document.querySelector(".btn");
+
+button.addEventListener("click", function() {
+    document.body.classList.toggle("backgroundtoggle");
+});
+
