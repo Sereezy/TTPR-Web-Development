@@ -19,14 +19,15 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
+    var numOfPeople = names.length
+    var randomnum = Math.floor(Math.random() * numOfPeople)
+    var randomPeople = names[randomnum]
     
-    
-    
-    
+    return `${randomPeople} is buying lunch Today!`
 
 
 /******Don't change the code below*******/    
 }
 
-var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
+var people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
 console.log(whosPaying(people))

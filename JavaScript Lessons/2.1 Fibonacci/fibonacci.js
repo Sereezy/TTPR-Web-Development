@@ -37,3 +37,28 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+
+function fibonacciGenerator (n){
+var output = [];
+
+if (n==1){
+   output =[0]; //only one element no need to add
+
+} else if (n == 2) { //because there is only one element before so no need to add
+    output = [0,1];
+}
+else {
+    output =[0,1];
+
+for (var i= 2; i < n; i++) {
+    //adding the two numbers to create fib number
+    output.push(output[output.length -2] + output[output.length -1]);
+}
+}
+return output;
+}
+
+
+
+var output = fibonacciGenerator(20); //to get first 20 fibonacci numbers
+console.log(output);

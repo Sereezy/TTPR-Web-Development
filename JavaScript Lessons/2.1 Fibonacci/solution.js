@@ -40,7 +40,7 @@ function fibonacciGenerator(n) {
   if (n === 1) {
     //Since this is the first element, there’s nothing to calculate—just set output to [0]. 
     output = [0];
-  } else if (n === 2) {
+  } else if (n ===2) {
     //Since it's the second element, there aren't 2 prior values to calculate the sum. Just set count = [0, 1].
     output = [0, 1];
   } else {
