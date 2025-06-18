@@ -8,5 +8,6 @@ Change the "Second" list item to be purple
 document.getElementsByTagName("li")[1].style.color = "purple";
 document.querySelector(".btn").style.backgroundColor = "red";
 document.querySelector(".btn").style.color = "white";
-document.querySelector("title").innerHTML = "say Goodbye World";
+document.querySelector("#title").innerHTML = "Goodbye World";
 document.querySelector("a").style.color = "blue";
+document.querySelector("h1").classList.toggle("huge");
