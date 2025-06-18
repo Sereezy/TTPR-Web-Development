@@ -1,0 +1,12 @@
+.huge {
+    font-size: 10rem;
+    color: green;
+    font-weight: bold;
+}
+
+.small {
+    font-size: 3rem;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
