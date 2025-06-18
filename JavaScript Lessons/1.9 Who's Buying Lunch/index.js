@@ -19,10 +19,11 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
-    
-    
-    
-    
+    var partysize = names.length 
+    var randomPosition = Math.floor(Math.random() * partysize)
+    var igotit = names[randomPosition]
+
+    return (`${igotit} is going to buy lunch today!`)
 
 
 /******Don't change the code below*******/    

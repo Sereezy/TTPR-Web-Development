@@ -37,3 +37,25 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+
+function fibonacciGenerator(n){
+    var output = [0,1]
+    if (n === 1) {
+        output = [0];
+    }
+    else if (n === 2) {
+        output = [0,1];
+    }
+    else {
+        output = [0,1]
+    }
+
+    for (var i = 0; i < n; i++){
+         output.push(output[output.length - 2] + output[output.length - 1]);
+    
+    }
+    return output;
+}
+var output = fibonacciGenerator(3)
+console.log(output)
+
