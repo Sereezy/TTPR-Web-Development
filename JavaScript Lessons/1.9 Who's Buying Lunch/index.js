@@ -17,14 +17,12 @@ NOTE: Think about how we calculate a random number selected on a dice
 function whosPaying(names) {
     
 /******Don't change the code above*******/
-    
-    //Write your code here.
-    
-    
-    
-    
+    var numOfPeople = names.length
+    var random = Math.floor(Math.random() * numOfPeople)
+    var randomPerson = names[random]
 
-
+    return `${randomPerson} is going to buy lunch today!`  
+    
 /******Don't change the code below*******/    
 }
 
