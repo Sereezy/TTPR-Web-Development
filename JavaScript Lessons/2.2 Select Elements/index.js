@@ -13,3 +13,6 @@ document.querySelector("h1").classList.add("huge");
 document.querySelector("li a").style.color = "pink"
 document.querySelectorAll("#list .item")[1].style.color = "purple"
 
+document.querySelector("a").attributes
+document.querySelector("a").getAttribute("href");
+document.querySelector("a").setAttribute("href", "https://www.linkedin.com");
