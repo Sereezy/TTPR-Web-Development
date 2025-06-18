@@ -10,3 +10,11 @@ document.querySelector(".btn").style.color = "white";
 document.querySelector("h1").innerHTML = "Goodbye World"; 
 document.querySelector("li a").style.color = "pink";
 document.querySelectorAll("#li .item")[1].style.color = "purple";
+
+
+
+const button = document.querySelector(".btn");
+
+button.addEventListener("click", function () {
+  document.body.classList.toggle("pink-background");
+});
