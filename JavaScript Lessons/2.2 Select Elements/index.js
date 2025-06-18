@@ -5,3 +5,11 @@ Change the text of the title to say Goodbye World
 Change the text inside the anchor tag to be blue
 Change the "Second" list item to be purple
 */
+
+document.querySelector('.btn').style.backgroundColor = 'red'; 
+document.querySelector('.btn').style.color = 'white'; 
+
+const header = document.querySelector('h1');
+header.innerHTML = 'Goodbye World'; 
+
+document.querySelectorAll('#list .item')[1].style.color = 'purple';

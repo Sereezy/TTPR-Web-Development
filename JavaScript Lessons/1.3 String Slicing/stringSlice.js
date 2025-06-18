@@ -6,8 +6,9 @@ Return the sliced input
 
 
 
-
-
+function sliceString(text){
+  return text.slice(0, 140);
+}
 /* SAMPLE INPUT */
 
 // A sentence that is longer than 140 characters

@@ -37,3 +37,16 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+
+function fibonacciGenerator(n) {
+    if (n <= 1) {
+      return n;
+    } else { 
+      return fibonacciGenerator(n - 1) + fibonacciGenerator(n - 2);
+    }
+    
+}
+  
+  return output;
+
+
