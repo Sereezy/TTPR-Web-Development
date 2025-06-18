@@ -10,3 +10,7 @@ document.querySelector(".btn").style.backgroundColor = "red";
 document.querySelector(".btn").style.color = "white";
 document.querySelector("h1").innerHTML = "Goodbye World"
 document.querySelectorAll("#list .item")[1].style.color = "purple"
+
+document.querySelector("h1").classList.add("huge")
+document.querySelector("h1").classList.remove("huge")
+document.querySelector("h1").classList.toggle("huge")
