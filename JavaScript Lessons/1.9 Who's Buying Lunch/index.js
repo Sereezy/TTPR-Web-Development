@@ -20,10 +20,9 @@ function whosPaying(names) {
     
     //Write your code here.
     
-    
-    
-    
-
+    numberofpeople =Math.floor(Math.random() * names.length);
+    randompeople = numberofpeople
+    return randompeople
 
 /******Don't change the code below*******/    
 }
