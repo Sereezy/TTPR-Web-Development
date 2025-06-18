@@ -37,3 +37,19 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+function fibonacciGenerator(num) {
+var fibocontainer = []
+var firstnum = 0
+// var secondNum = 0
+var addition = 0
+console.log(fibocontainer.length)
+    for(var i = 0; i < num; i++) {
+        fibocontainer.push(firstnum)
+        firstnum = firstnum + addition
+        addition++
+    }
+
+    return fibocontainer
+}
+
+console.log(fibonacciGenerator(4))
