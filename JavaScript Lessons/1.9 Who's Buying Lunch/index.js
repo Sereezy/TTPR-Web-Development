@@ -20,13 +20,31 @@ function whosPaying(names) {
     
     //Write your code here.
     
-    
+    var numberOfPeople = names.length
+var randomPostion = Math.floor(Math.random() * numberOfPeople) //Math.Random returns number between 0 & 1 
+var randomPerson = names[randomPostion]
+
+return `${randomPerson} is going to buy lunch today!`
+
+/******Don't change the code below*******/    
+
+
+var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
+console.log(whosPaying(people))
+
+var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
+console.log(whosPaying(people))
+
     
     
 
 
 /******Don't change the code below*******/    
 }
+var numberOfPeople = names.length
+var randomPostion = Math.floor(Math.random() * numberOfPeople) //Math.Random returns number between 0 & 1 
+var randomPerson = names[randomPostion]
 
-var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
-console.log(whosPaying(people))
+return `${randomPerson} is going to buy lunch today!`
+
+/******Don't change the code below*******/    
