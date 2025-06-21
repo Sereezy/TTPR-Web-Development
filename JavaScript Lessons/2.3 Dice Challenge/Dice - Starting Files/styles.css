@@ -7,7 +7,7 @@
 .dice {
   text-align: center;
   display: inline-block;
-
+  margin-top: 0px;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  margin: 30px;
+  margin: 10px;
   font-family: "Gloria Hallelujah", cursive;
   text-shadow: 5px 0 #232931;
   font-size: 8rem;
@@ -24,6 +24,7 @@ h1 {
 
 p {
   font-size: 2rem;
+  margin-top: 0;
   color:antiquewhite;
   font-family: "Gloria Hallelujah", cursive;
 }
@@ -33,10 +34,30 @@ img {
 }
 
 footer {
-  margin-top: 5%;
+  margin-top: 2%;
   font-size: 20px;
   color: antiquewhite;
   text-align: center;
   font-family: "Gloria Hallelujah", cursive;
 
+}
+
+.roll {
+  display: flex;
+  justify-content: center;
+   margin-top: 15px;
+   margin-bottom: 0;
+}
+.roll button {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: antiquewhite;
+  border: none;
+  font-size: 18pt;
+  border-radius: 5px;
+  height: 65px;
+  width: 105px;
+  padding: 0 10px;
+  cursor: pointer;
 }
