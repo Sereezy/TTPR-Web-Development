@@ -9,17 +9,38 @@
 //         // alert("I got clicked!");
 //         sound().Audio
 //         )};
+function buttonAnimation(currentkey)
+{
+var activeButton = document.querySelector("." + currentkey )
+activeButton.classList.add("pressed")
+
+setTimeout(function(){
+  activeButton.classList.remove("pressed")
+} , 100);
+}
+
+// function removeAnimation(currentkey)
+// {
+//   var activeButton = document.querySelector("." + currentkey )
+// activeButton.classList.remove("pressed")
+// }
+
+
 
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
-    const buttonKey = this.innerHTML.toLowerCase();
+    buttonKey = this.innerHTML.toLowerCase();
     playSound(buttonKey);
+    buttonAnimation(buttonKey)
+    // setTimeout(removeAnimation(buttonKey)( 5000));
   });
 }
 
 document.addEventListener("keydown", function (event) {
   pressedKey = event.key.toLowerCase();
   playSound(pressedKey);
+  buttonAnimation(pressedKey);
+  // removeAnimation(pressedKey);
 });
 
 function playSound(key) {
