@@ -1,25 +1,33 @@
-document.querySelectorAll('drum').forEach(element => {
-    element.addEventListener('click', function(){
-        this.style.Color = 'orange';
-        let key = this.className.split(' ')[0];
-        function alertKey(string){
-            alert(`${string}-key was pressed!`)
-        }
-        switch (situation){
-            case 'w':
-                alertKey('w')
-            case 'a':
-                alertKey('a')
-            case 's':
-                alertKey('s')
-            case 'd':
-                alertKey('d')
-            case 'j':
-                alertKey('j')
-            case 'k':
-                alertKey('k')
-            case 'l':
-                alertKey('l')
-        }
-    })
-})
+function buttonAnimation(button) {
+    button.classList.add('pressed');
+    setTimeout(() => {
+        button.classList.remove('pressed');
+    }, 200);
+}
+
+function drumSound(button) {
+    
+}
+
+function alertKey(key) {
+    const button = document.querySelector(`.${key}.drum`);
+    if (button) {
+        // alert(`${key}-key was pressed!`);
+        buttonAnimation(button);
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    const key = event.key.toLowerCase();
+    switch (key) {
+        case 'w':
+        case 'a':
+        case 's':
+        case 'd':
+        case 'j':
+        case 'k':
+        case 'l':
+            alertKey(key);
+            break;
+    }
+});
