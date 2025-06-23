@@ -1,6 +1,6 @@
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+//var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
-for (var i = 0; i< numberOfDrumButtons; i++){
+/*for (var i = 0; i< numberOfDrumButtons; i++){
 
     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     
@@ -8,17 +8,34 @@ for (var i = 0; i< numberOfDrumButtons; i++){
         makeSound(buttonInnerHTML);
         // buttonAnimation(buttonInnerHTML);
     });
+}*/
+
+for(var i = 0; i < document.querySelectorAll(".drum").length; i++) {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+
+    var button = this.innerHTML;
+    //compress the button to each case statement
+  
+    makeSound(button);
+    this.style.color = "orange";  //change color of the initials 
+    //we can access its properties using 'this'
+  });
 }
+    //add an event listener to the entire document so that the entire web page listens for keypresses.
+document.addEventListener("keydown", function(event){
+    makeSound(event.key)
+});
+
+
 
 
     
     function makeSound(key){
-      console.log(key)
+  
         switch (key) {
             case "w":
             var tom1 = new Audio("sounds/tom-1.mp3");
             tom1.play();
-            console.log('played');
             break;
 
             case "a":
@@ -47,11 +64,13 @@ for (var i = 0; i< numberOfDrumButtons; i++){
             break;
 
             case "l":
-            var kick = new Audio("sounds/kick-bass.mp3");
-            kick.play();
+            var kickBass = new Audio("sounds/kick-bass.mp3");
+            kickBass.play();
             break;
+            default:
+              console.log(button);
     
-    default: break;
+            
 
   }
 }
