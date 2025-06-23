@@ -10,3 +10,4 @@ document.querySelector(".btn").style.color = "white";
 document.querySelector("#title").innerText = "Goodbye World";
 document.getElementsByTagName("a")[0].style.color = "blue"; 
 document.querySelectorAll(".item")[1].style.color = "purple";
+document.querySelector("h1").classList.add("huge")
