@@ -1,13 +1,30 @@
 var btns = document.querySelectorAll("button")
 console.log(btns)
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener('click', (event) => {
-    var text = event.target.innerText
-    console.log(text)
-    makeSound(text)
-  })
+MappingButtons()
+function MappingButtons() {
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {
+      var text = this.innerHTML
+
+      buttonAnimation(text)
+      console.log(text)
+      makeSound(text)
+    })
+  }
 }
+function buttonAnimation(key) {
+  var btn = document.querySelector("." + key)
+  btn.classList.add("pressed")
+  setTimeout(() => btn.classList.remove("pressed"), 1000)
+  console.log(key + "is clicked")
+
+}
+document.addEventListener('keydown', (event) => {
+  makeSound(event.key)
+  buttonAnimation(event.key)
+})
 function makeSound(type) {
+  console.log(`${type} was pressed or clicked`)
   switch (type) {
     case 'w':
       var audio = new Audio("./sounds/tom-1.mp3");
