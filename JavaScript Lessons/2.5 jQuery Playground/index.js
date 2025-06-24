@@ -96,21 +96,39 @@ console.log($("button"));
 
 
 // 1. Change the text color of the <h1> to 'teal'.
-
+$('h1').css('color','pink')
 // 2. Create a css class named "title-header" with font-size: 35 and add it to the <h1>.
-
+$('h1').addClass("title-header").css('font-size',35);
 // 3. Change the text of only the second button to say "Second".
-
+$('button').eq(1).html('Second')
 // 4. When any button is clicked, make all buttons fade out.
-
+// $('button').click(function(){
+//     $('button').fadeOut();
+// })
 // 5. When the page loads, add a <p> that says "Welcome!" before the <h1>.
-
+$('h1').before('<p> Welcome! <p>')
 // 6. When the user hovers over the <h1>, change its font size to 50px.
-
+$('h1').hover(function(){
+    $('h1').css('font-size', '50px');
+});
+$('h1').mouseleave(function() {
+  $('h1').css('font-size', '35px');
+});
 // 7. Toggle the <h1> visibility when any button is clicked using .slideToggle().
-
+// $('button').click(function(){
+//     $('h1').slideToggle();
+// });
 // 8. Change the anchor tag’s href to point to https://www.wikipedia.org/.
-
+$('a').attr('href', 'https://www.wikipedia.org/');
 // 9. Add a .click() event to each button that adds the class "clicked-btn".
+$('button').click(function() {
+  $(this).addClass('clicked-btn');  
 
+  $('button').each(function() {
+    console.log($(this).attr('class'));
+  });
+});
 // 10. CHALLENGE Animate the <h1>’s opacity to 0.2 when a button is double-clicked.
+$('button').dblclick(function() {
+  $('h1').animate({ opacity: 0.2 }, 500);
+});
