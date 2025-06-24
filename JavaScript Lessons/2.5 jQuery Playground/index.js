@@ -58,16 +58,16 @@ $("h1").on("mouseover", function () {
 });
 
 //<buttonTagBefore> <h1>hello</h1>
-$('h1').before('<button>before</button>')
+// $('h1').before('<button>before</button>')
 
 //<h1>hello</h1> <buttonTagAfter>
-$('h1').after('<button>after</button>')
+// $('h1').after('<button>after</button>')
 
 //<h1> <buttonTagPrepend>hello </h1>
-$('h1').prepend('<button>prepend</button>')
+// $('h1').prepend('<button>prepend</button>')
 
 //<h1> hello<buttonTagAppend> </h1>
-$('h1').append('<button>append</button>')
+// $('h1').append('<button>append</button>')
 
 //toggle jQuery animations
 $("button").on("click", function () {
