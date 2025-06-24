@@ -17,15 +17,42 @@ for(var i = 0; i < document.querySelectorAll(".drum").length; i++) {
     //compress the button to each case statement
   
     makeSound(button);
+     buttonAnimation(button);
     this.style.color = "orange";  //change color of the initials 
     //we can access its properties using 'this'
   });
 }
     //add an event listener to the entire document so that the entire web page listens for keypresses.
 document.addEventListener("keydown", function(event){
-    makeSound(event.key)
+    makeSound(event.key);
+    buttonAnimation(event.key);
+    this.style.color = "orange";
 });
 
+
+function buttonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+
+  if (activeButton) {
+    activeButton.classList.add("pressed");
+
+ 
+    setTimeout(function() {
+      activeButton.classList.remove("pressed");
+    }, 20000);
+  }
+}
+
+/*function buttonAnimation(currentKey) {
+
+ var activeButton = document.querySelector("." + currentKey);
+
+ activeButton.classList.add("pressed");
+
+ setTimeout(function() {
+   activeButton.classList.remove("pressed");
+ }, 100);
+}*/
 
 
 
@@ -68,13 +95,22 @@ document.addEventListener("keydown", function(event){
             kickBass.play();
             break;
             default:
-              console.log(button);
+              console.log(key);
     
             
 
   }
 }
 
+/*function buttonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+  if (activeButton) {
+    activeButton.classList.add("pressed");
+    setTimeout(function () {
+      activeButton.classList.remove("pressed");
+    }, 1000);
+  }
+}
 
 // function buttonAnimation(currentKey) {
 
@@ -87,3 +123,4 @@ document.addEventListener("keydown", function(event){
 //   }, 100);
 
 // }
+*/
