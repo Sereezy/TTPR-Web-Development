@@ -13,11 +13,11 @@
 // // })
 // // }
 
-// // for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
-// //     document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-// //         console.log(this.style.color = "orange" )
-// // })
-// // }
+for(var i = 0; i < document.querySelectorAll(".drum").length; i++){
+    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+        console.log(this.style.color = "orange" )
+})
+}
 
 // for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 //   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
@@ -59,6 +59,19 @@
 //     alert("Key was pressed")
 // })
 // }
+
+function buttonAnimation(currentKey) {
+    var activeButton = document.querySelector("." + currentKey);
+
+    if (activeButton){
+        activeButton.classList.add("pressed");
+        
+        setTimeout(function() {
+            activeButton.classList.remove("pressed");
+        }, 20000);
+    }
+}
+
 
 function makeSound(key) {
   switch (key) {
@@ -105,12 +118,3 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 document.addEventListener("keydown", function (event) {
   makeSound(event.key);
 });
-
-function buttonAnimation(currentKey) {
- var activeButton = document.querySelector("." + currentKey);
- activeButton.classList.add("pressed");
- 
- setTimeout(function() {
-   activeButton.classList.remove("pressed");
- }, 100);
-}
