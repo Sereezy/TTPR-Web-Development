@@ -2,13 +2,13 @@
 console.log($("button"));
 
 // Get the current CSS value by passing the property name as a string
-// console.log($("h1").css("font-size"));
+//console.log($("h1").css("font-size"));
 
 //Manipulating Styles
-// $("h1").css("color", "darkseagreen");
+$("h1").css("color", "teal");
 
 //Add Class
-// $("h1").addClass("big-title");
+$("h1").addClass("big-title");
 
 //Remove Class
 // $("h1").removeClass("big-title");
