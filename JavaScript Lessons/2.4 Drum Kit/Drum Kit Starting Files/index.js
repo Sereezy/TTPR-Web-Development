@@ -1,3 +1,4 @@
+//make audio object to make sound by calling its play()
 var audio = new Audio("./sounds/crash.mp3");
 var audio1 = new Audio("./sounds/kick-bass.mp3");
 var audio2 = new Audio("./sounds/snare.mp3");
@@ -5,6 +6,7 @@ var audio3 = new Audio("./sounds/tom-1.mp3");
 var audio4 = new Audio("./sounds/tom-2.mp3");
 var audio5 = new Audio("./sounds/tom-3.mp3");
 var audio6 = new Audio("./sounds/tom-4.mp3");
+
 var list = [
   "./sounds/crash.mp3",
   "./sounds/kick-bass.mp3",
@@ -26,13 +28,16 @@ var letterlist = ["w", "a", "s", "d", "j", "k", "l"];
 //         })
 
 // }
+
+
+//addEventListener for each buttons 
 for (let i = 0; i < listA.length; i++) {
   document.querySelectorAll("button")[i].addEventListener("keydown", function (event) {
-    listA[i].play();
-    //document.querySelectorAll("button")[i].classList.toggle("pressed");
-    this.style.color = "orange";
-    var button = this.style.innerHTML;
-    switch (event.key) 
+   
+
+    this.style.color = "orange"; //it change the text color to orange
+    
+    switch (event.key) //gives  string of key pressed
     {
       case "w":
         var audio = new Audio("./sounds/kick-bass.mp3");
@@ -107,7 +112,11 @@ document.addEventListener("keydown",function(event){
 })
 function buttonAnimation(key){
   document.querySelector("."+key).classList.toggle("pressed")
-  setTimeout(function(){document.querySelector("."+key).classList.toggle("pressed");}, 60);
+  document.querySelector("."+key).style.color="orange";
+  setTimeout(function(){
+    document.querySelector("."+key).classList.toggle("pressed");
+    document.querySelector("."+key).style.color=" #DA0463";
+  }, 300);
 }
 
 
