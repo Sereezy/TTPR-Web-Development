@@ -1,25 +1,28 @@
 var buttonColours = ["red", "blue", "green", "yellow"];
 
-//5. At the top of the game.js file, create a new empty array called gamePattern.
 var gamePattern = [];
 
 var userClickedPattern = [];
+
+var started = false;
+
+//2. Create a new variable called level and start at level 0.
+var level = 0;
 //1. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
 $(".btn").click(function () {
-  //2. Inside the handler, create a new variable called userChosenColour to store the id of the button that got clicked.
   var userChosenColour = $(this).attr("id");
-
-  //4. Add the contents of the variable userChosenColour created in step 2 to the end of this new userClickedPattern
   userClickedPattern.push(userChosenColour);
 
-  //console.log(userClickedPattern);
+  console.log(userClickedPattern);
   playSound(userChosenColour);
+  animatePress(userChosenColour);
 });
-a;
 
 //1. Inside game.js create a new function called nextSequence()
 function nextSequence() {
-  //2. Inside the new function generate a new random number between 0 and 3, and store it in a variable called randomNumber
+  userClickedPattern = [];
+  level++;
+  $("#level-title").text("Level " + level);
   var randomNumber = Math.floor(Math.random() * 4);
 
   //4. Create a new variable called randomChosenColour and use the randomNumber from step 2 to select a random colour from the buttonColours array.
@@ -46,4 +49,31 @@ function animatePress(currentColor) {
   setTimeout(function () {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
+}
+
+$(document).keypress(function () {
+  if (!started) {
+    //3. The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
+//1. Create a new function called checkAnswer(), it should take one input with the name currentLevel
+function checkAnswer(currentLevel) {
+  //3. Write an if statement inside checkAnswer() to check if the most recent user answer is the same as the game pattern. If so then log "success", otherwise log "wrong".
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    console.log("success");
+
+    //4. If the user got the most recent answer right in step 3, then check that they have finished their sequence with another if statement.
+    if (userClickedPattern.length === gamePattern.length) {
+      //5. Call nextSequence() after a 1000 millisecond delay.
+      setTimeout(function () {
+        nextSequence();
+      }, 1000);
+    }
+  } else {
+    console.log("wrong");
+  }
 }
