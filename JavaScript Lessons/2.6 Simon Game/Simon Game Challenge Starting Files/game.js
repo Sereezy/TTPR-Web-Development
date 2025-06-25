@@ -1,46 +1,11 @@
+// Step 1–2 — Setup variables
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
-
-var level = 0;
 var started = false;
+var level = 0;
 
-// Detect button click
-$(".btn").click(function () {
-  var userChosenColour = $(this).attr("id");
-  userClickedPattern.push(userChosenColour);
-
-  playSound(userChosenColour);
-  animatePress(userChosenColour);
-});
-
-function checkAnswer(currentLevel) {
-    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
-      // If they finished the full sequence, go to next level
-      if (userClickedPattern.length === gamePattern.length) {
-        setTimeout(function () {
-          nextSequence();
-        }, 1000);
-      }
-    } else {
-      // ❌ Wrong answer
-      playSound("wrong");
-  
-      $("body").addClass("game-over");
-  
-      $("#level-title").text("Game Over, Press Any Key to Restart");
-  
-      setTimeout(function () {
-        $("body").removeClass("game-over");
-      }, 200);
-  
-      // Reset the game
-      startOver();
-    }
-  }
-  
-
-// Detect keypress to start game
+// Step 7 — Start the game on first keypress
 $(document).keypress(function () {
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -49,7 +14,19 @@ $(document).keypress(function () {
   }
 });
 
-// Generate next sequence
+// Step 4 — Detect button clicks
+$(".btn").click(function () {
+  var userChosenColour = $(this).attr("id");
+  userClickedPattern.push(userChosenColour);
+
+  playSound(userChosenColour);
+  animatePress(userChosenColour);
+
+  // Step 8 — Check the user's answer
+  checkAnswer(userClickedPattern.length - 1);
+});
+
+// Step 3 — Generate next color in sequence
 function nextSequence() {
   userClickedPattern = [];
 
@@ -64,13 +41,13 @@ function nextSequence() {
   playSound(randomChosenColour);
 }
 
-// Play sound helper
+// Step 5 — Play sound
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
 
-// Animate press helper
+// Step 5 — Animate button press
 function animatePress(currentColour) {
   $("#" + currentColour).addClass("pressed");
 
@@ -79,5 +56,32 @@ function animatePress(currentColour) {
   }, 100);
 }
 
+// Step 8 — Check user's answer
+function checkAnswer(currentLevel) {
+  if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+    if (userClickedPattern.length === gamePattern.length) {
+      setTimeout(function () {
+        nextSequence();
+      }, 1000);
+    }
+  } else {
+    playSound("wrong");
 
+    $("body").addClass("game-over");
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+
+    setTimeout(function () {
+      $("body").removeClass("game-over");
+    }, 200);
+
+    startOver();
+  }
+}
+
+// Step 8 — Reset game on wrong answer
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
+}
 
