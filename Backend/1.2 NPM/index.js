@@ -21,8 +21,8 @@ inquirer
 
 ])
 .then ((answer) => {
-    console.log(answers)
-    var url = answers.URL
+    console.log(answer)
+    var url = answer.URL
     var qr_svg = qr.image(url);
 qr_svg.pipe(fs.createWriteStream('qr_img.png'));
 
@@ -35,5 +35,8 @@ fs.writeFile("URL.txt", url, (err) => {
 .catch((error) => {
     if (error.isTtyError) {
 
+    }
+    else {
+        console.error("An error occurred:", error);
     }
 })
