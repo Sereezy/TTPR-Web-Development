@@ -96,9 +96,9 @@ console.log($("button"));
 
 
 // 1. Change the text color of the <h1> to 'teal'.
-
+$("h1").css("color", "teal");
 // 2. Create a css class named "title-header" with font-size: 35 and add it to the <h1>.
-
+$("h1").addClass("title-header");
 // 3. Change the text of only the second button to say "Second".
 
 // 4. When any button is clicked, make all buttons fade out.
