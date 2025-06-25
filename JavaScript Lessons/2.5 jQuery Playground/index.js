@@ -1,17 +1,25 @@
+console.log("jQuery file is working");
+
 //Selecting Elements
+
 console.log($("button"));
 
 // Get the current CSS value by passing the property name as a string
 // console.log($("h1").css("font-size"));
+$('h1').addClass('big-title')
+console,log($("h1").css("font-size"));
 
 //Manipulating Styles
 // $("h1").css("color", "darkseagreen");
+$("h1").css("color", "darkseagreen");
 
 //Add Class
 // $("h1").addClass("big-title");
+$("h1").addClass("big-title");
 
 //Remove Class
 // $("h1").removeClass("big-title");
+$("h1").removeClass("big-title");
 
 //Add Multiple Classes
 // $("h1").addClass("big-title margin-50");
@@ -96,6 +104,16 @@ console.log($("button"));
 
 
 // 1. Change the text color of the <h1> to 'teal'.
+// index.js
+
+    $("h1").css("color", "teal");
+
+$("h1").addClass("title-header");
+
+$("button").eq(1).text("Second");
+
+  
+
 
 // 2. Create a css class named "title-header" with font-size: 35 and add it to the <h1>.
 
