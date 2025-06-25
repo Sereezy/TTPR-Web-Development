@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "inquirer": "^12.6.3",
+    "qr": "^0.5.0",
+    "qr-image": "^3.2.0"
+  }
+}
