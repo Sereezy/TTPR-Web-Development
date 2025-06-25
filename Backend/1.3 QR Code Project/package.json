@@ -1,0 +1,17 @@
+{
+  "name": "1.3-qr-code-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "inquirer": "^12.6.3",
+    "qrcode": "^1.5.4"
+  }
+}
