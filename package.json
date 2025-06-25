@@ -1,0 +1,24 @@
+{
+  "name": "ttpr-web-development",
+  "version": "1.0.0",
+  "description": "I'm learning about npm",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sereezy/TTPR-Web-Development.git"
+  },
+  "author": "Talisha Rahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sereezy/TTPR-Web-Development/issues"
+  },
+  "homepage": "https://github.com/Sereezy/TTPR-Web-Development#readme",
+  "dependencies": {
+    "sillyname": "^0.1.0",
+    "superheroes": "^4.0.0"
+  }
+}
