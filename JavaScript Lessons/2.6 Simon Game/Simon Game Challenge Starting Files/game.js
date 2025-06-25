@@ -84,3 +84,7 @@ function startOver() {
   started = false;
 }
 >>>>>>> 0628caaf1723de9b6a5e1fd4f90b574045772123:JavaScript Lessons/2.6 Simon Game/Simon Game Challenge Starting Files/game.js
+
+function nextSequence(){
+  var randomNumber = Math.floor(Math.random)
+}
