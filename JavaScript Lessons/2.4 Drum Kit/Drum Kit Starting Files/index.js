@@ -4,7 +4,6 @@ var letterArray = ['w', 'a', 's', 'd', 'j', 'k', 'l']
 
 
 function buttonAnimation(pressed) {
-
 for (var i = 0; i < letterArray.length; i++) {
         if (pressed.key.includes(letterArray[i], 0)) {
         var existingButton = document.querySelector([`.${pressed.key}`]);
