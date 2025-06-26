@@ -26,8 +26,8 @@ inquirer
   })
   .catch((error) => {
     if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
+      console.log("There has been a error, please try again!")
     } else {
-      // Something else went wrong
+      console.log("There is no errors!")
     }
   });
