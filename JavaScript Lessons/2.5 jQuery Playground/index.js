@@ -114,3 +114,33 @@ console.log($("button"));
 // 9. Add a .click() event to each button that adds the class "clicked-btn".
 
 // 10. CHALLENGE Animate the <h1>’s opacity to 0.2 when a button is double-clicked.
+
+$("h1").css("color", "teal");
+
+$("h1").addClass("title-header");
+
+$("button").eq(1).text("Second");
+
+$("button").click(function () {
+  $("button").fadeOut();
+});
+
+$("h1").before("<p>Welcome!</p>");
+
+$("h1").on("mouseover", function () {
+  $(this).css("font-size", "50px");
+});
+
+$("button").click(function () {
+  $("h1").slideToggle();
+});
+
+$("a").attr("href", "https://www.wikipedia.org/");
+
+$("button").click(function () {
+  $(this).addClass("clicked-btn");
+});
+
+$("button").on("dblclick", function () {
+  $("h1").animate({ opacity: 0.2 });
+});

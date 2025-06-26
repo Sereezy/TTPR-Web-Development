@@ -1,4 +1,4 @@
-var numberOfDrumButtons = document.querySelectorAll(".drum").length;
+let levelUp = 10;var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i < numberOfDrumButtons; i++) {
 
