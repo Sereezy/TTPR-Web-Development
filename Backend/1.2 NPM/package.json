@@ -1,6 +1,7 @@
 {
   "name": "learning-npm",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "I'm learning about npm",
   "main": "index.js",
   "type": "module",
@@ -12,5 +13,16 @@
   "dependencies": {
     "sillyname": "^0.1.0",
     "superheros": "^1.0.0"
+=======
+  "description": "I am learning npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Serena",
+  "license": "ISC",
+  "dependencies": {
+    "sillyname": "^0.1.0"
+>>>>>>> 3188a0da8156b48b69f0c589c7b474c96fd910c1
   }
 }
