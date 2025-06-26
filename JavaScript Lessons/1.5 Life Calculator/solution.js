@@ -36,7 +36,7 @@ Solution below
 
 function lifeInWeeks(age){
     var yearsRemaining = 90 - age;
-    var monthsRemaining = yearsRemaining * 12;
+    var monthsRemaininewng = yearsRemaining * 12;
     var weeksRemaining = yearsRemaining * 52;
     var daysRemaining = yearsRemaining * 365;
 
