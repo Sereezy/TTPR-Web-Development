@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "I am learning npm",
   "main": "index.js",
-<<<<<<< HEAD
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,14 +13,5 @@
     "inquirer": "^12.6.3",
     "sillyname": "^0.1.0",
     "superheroes": "^4.0.0"
-=======
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Serena",
-  "license": "ISC",
-  "dependencies": {
-    "sillyname": "^0.1.0"
->>>>>>> 3188a0da8156b48b69f0c589c7b474c96fd910c1
   }
 }
