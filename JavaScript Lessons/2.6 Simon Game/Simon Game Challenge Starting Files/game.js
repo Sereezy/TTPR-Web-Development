@@ -3,8 +3,8 @@ var gamePattern = []
 var userClickedPattern = []
 var started = false
 var level = 0
-localStorage.setItem("playerAnswer", "")
-function onLoad () {    
+function onLoad () {  
+    localStorage.setItem("playerAnswer", "")  
 }
 
 function nextSequence() {
@@ -15,12 +15,10 @@ function nextSequence() {
     var randomChosenColour = buttonColours[randomNumber]
     playSound(randomChosenColour)
     }
-    console.log(localStorage.getItem('playerAnswer'), randomChosenColour)
- }
+    console.log(localStorage.getItem('playerAnswer'))
+    console.log(randomChosenColour)
 
-
-function checkAnswer() {
-if (localStorage.getItem("playerAnswer") === randomChosenColour) {
+    if (localStorage.getItem("playerAnswer") === randomChosenColour) {
     console.log(localStorage.getItem('playerAnswer'))
 
     answered = true
@@ -28,6 +26,11 @@ if (localStorage.getItem("playerAnswer") === randomChosenColour) {
     
     $('#level-title').text = `Level ${level}`
 }
+ }
+
+
+function checkAnswer() {
+
 }
 
 function animatePress(currentColour) {
