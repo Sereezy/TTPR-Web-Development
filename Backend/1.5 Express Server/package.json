@@ -1,5 +1,5 @@
 {
-  "name": "1.2-npm",
+  "name": "1.5-express-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,9 +11,6 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "inquirer": "^12.6.3",
-    "qr-image": "^3.2.0",
-    "sillyname": "^0.1.0",
-    "superheroes": "^4.0.0"
+    "express": "^5.1.0"
   }
 }
