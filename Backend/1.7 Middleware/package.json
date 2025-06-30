@@ -1,0 +1,17 @@
+{
+  "name": "1.7-middleware",
+  "version": "1.0.0",
+  "main": "index1.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris G",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "url": "^0.11.4"
+  }
+}

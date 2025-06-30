@@ -1,0 +1,15 @@
+{
+  "name": "postmantest",
+  "version": "1.0.0",
+  "description": "creating package to start",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris G",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
