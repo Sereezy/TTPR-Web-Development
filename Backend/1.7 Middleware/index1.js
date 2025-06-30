@@ -11,14 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res) => {
-  console.log(__dirname + "/public/index.html") //log path
   res.sendFile(__dirname + "/public/index.html");
 });
 
 app.post("/submit", (req, res) => {
-  console.log(req.body);
-  res.send("Form data received successfully.");
-});
+  console.log(req.body)
+})
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
