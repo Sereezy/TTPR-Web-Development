@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "body-parser": "^2.2.0",
     "express": "^5.1.0"
   },
   "name": "ttpr-web-development",
@@ -7,7 +8,6 @@
   "description": "This repository will contain all of our classroom projects for the web development bootcamp.",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
