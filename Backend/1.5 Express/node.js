@@ -1,21 +1,22 @@
-import http from "http";
-import url from "url";
+import express from 'express';
+const app = express();
 
-const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url, true);
+const port = 3000;
 
-  if (parsedUrl.pathname === "/" && req.method === "GET") {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.end("<h1>Welcome to the homepage!</h1>");
-  } else if (parsedUrl.pathname === "/about" && req.method === "GET") {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.end("<h1>About us</h1>");
-  } else {
-    res.writeHead(404, { "Content-Type": "text/html" });
-    res.end("<h1>Page not found</h1>");
-  }
+app.get("/", function(req, res) {
+  res.send("Hello World");
 });
 
-server.listen(3000, () => {
-  console.log("Server running at http://localhost:3000/");
+//About
+app.get("/about", function(req, res) {
+  res.send("<h1>About me.</h1><p>My name is Serena.</p>");
+});
+
+//Contact
+app.get("/contact", function(req, res) {
+  res.send("<h1>Contact me</h1><p>+8455441243</p>");
+});
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}.`);
 });
