@@ -17,6 +17,10 @@ app.get("/about", (req, res) => {
   res.send("<h1>About us</h1>");
 });
 
+app.get("/contact", (req, res) => {
+  res.send("<h1>Contact failed</h1>");
+});
+
 // Handle all other requests (404 - Not Found)
 app.use((req, res) => {
   res.status(404).send("<h1>Page not found</h1>");
