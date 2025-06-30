@@ -13,20 +13,28 @@ app.get("/", (req, res) => {
   res.send("<h1>Home Page</h1>");
 });
 
+//app.post("/register", (req, res) => {
+//  if (!req.body.email) {
+    //Bad request - missing required field
+//    return res.status(400).send("Email is required");
+//  }
+  //Otherwise:
+//  res.sendStatus(201).send("USer created");
+//});
+
 app.post("/register", (req, res) => {
-  //Do something with the data
-  res.sendStatus(201);
-});
+  res.send("Thanks for registering");
+})
 
-app.put("/user/serena", (req, res) => {
+app.put("/user/syed", (req, res) => {
   res.sendStatus(200);
 });
 
-app.patch("/user/serena", (req, res) => {
+app.patch("/user/syed", (req, res) => {
   res.sendStatus(200);
 });
 
-app.delete("/user/serena", (req, res) => {
+app.delete("/user/syed", (req, res) => {
   //Deleting
   res.sendStatus(200);
 });
