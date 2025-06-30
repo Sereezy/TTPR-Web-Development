@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "node.js": "^0.0.1-security"
+  }
+}
