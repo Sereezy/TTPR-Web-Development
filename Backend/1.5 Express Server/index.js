@@ -1,15 +1,22 @@
 import express from 'express';
-
-// Create an instance of an Express application
-//An Express application is a small program built with Express that runs on a server, listens for requests, and sends back the right response(ex: webpage)
 const app = express();
 
-// Define the port number the server will listen on
 const port = 3000;
 
-// Start the server and have it listen on the specified port
-// Once running, log a message to the console
+app.get("/", function(req, res) {
+  res.send("Hello World");
+});
+
+//About
+app.get("/about", function(req, res) {
+  res.send("<h1>About me.</h1><p>My name is Sutibro.</p>");
+});
+
+//Contact
+app.get("/contact", function(req, res) {
+  res.send("<h1>Contact me</h1><p>good</p>");
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
 });
-
