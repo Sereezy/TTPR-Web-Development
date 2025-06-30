@@ -12,12 +12,28 @@
     <button class="btn">Click Me</button>
 
     <ul id="list">
-      <li class="item"><a href="google.com">Google</a></li>
+      <li class="item"><a href="https://google.com">Google</a></li>
       <li class="item">Second</li>
       <li class="item">Third</li>
     </ul>
+
     <footer>
-      <script src="index.js" charset="utf-8"></script>
+      <script>
+        // Change the background color of the button to red
+        document.querySelector(".btn").style.backgroundColor = "red";
+
+        // Change the text color of the button to be white
+        document.querySelector(".btn").style.color = "white";
+
+        // Change the text of the title to say Goodbye World
+        document.getElementById("title").textContent = "Goodbye World";
+
+        // Change the text inside the anchor tag to be pink
+        document.querySelector("a").style.color = "pink";
+
+        // Change the "Second" list item to be purple
+        document.querySelectorAll(".item")[1].style.color = "purple";
+      </script>
     </footer>
   </body>
 </html>
