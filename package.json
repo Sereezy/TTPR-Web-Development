@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^5.1.0",
     "fs": "^0.0.1-security",
     "inquirer": "^12.6.3",
     "qr-image": "^3.2.0"
@@ -8,6 +9,7 @@
   "version": "1.0.0",
   "description": "This repository will contain all of our classroom projects for the web development bootcamp.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
