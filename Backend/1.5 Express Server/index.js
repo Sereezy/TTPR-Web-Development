@@ -20,3 +20,11 @@ app.get("/", function(req, res) {
 
   res.send("Hello World");
 });
+
+app.get("/about", function(req, res) {
+  res.send("<h1>We are in about.</h1> <p>You hungry?</p>");
+});
+
+app.get("/contact", function(req, res) {
+  res.send("<h1>We are in contact.</h1> <p>Me too twin.</p>");
+});
