@@ -4,7 +4,9 @@ Write a function that slices the users input to 140 characters.
 Return the sliced input
 */
 
-
+function slicedString (input){
+    return input.slice(0, 140) 
+}
 
 
 

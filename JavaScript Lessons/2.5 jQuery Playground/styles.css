@@ -7,3 +7,10 @@
 .margin-50{
     margin: 50px;
 }
+.title-header {
+  font-size: 35px;
+}
+.clicked-btn {
+  background-color: lightgray;
+  color: black;
+}
