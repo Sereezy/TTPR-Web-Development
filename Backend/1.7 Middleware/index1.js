@@ -15,7 +15,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
+  res.send("Form data received!");
 })
 
 app.listen(port, () => {
