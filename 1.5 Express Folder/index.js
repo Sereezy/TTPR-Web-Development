@@ -7,16 +7,20 @@ app.get("/", function(req, res) {
   res.send("Hello World");
 });
 
-//About
 app.get("/about", function(req, res) {
-  res.send("<h1>About me.</h1><p>My name is Serena.</p>");
+  res.send("<h1>About me.</h1><p>My name is Talisha.</p>");
 });
 
-//Contact
 app.get("/contact", function(req, res) {
-  res.send("<h1>Contact me</h1><p>+8455441243</p>");
+  res.send("<h1>Contact me</h1><p>+911</p>");
 });
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}.`);
+});
+
+app.get("/", function(req, res) {
+  console.log(req)
+  console.log(req.rawHeaders) 
+res.send("Hello World");
 });

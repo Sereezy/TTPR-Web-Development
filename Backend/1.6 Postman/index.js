@@ -14,8 +14,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  //Do something with the data
-  res.sendStatus(201);
+  if (!req.body.email) {
+    return res.status(400).send("Email is required");
+  }
+
+  res.status(201).send("User created");
 });
 
 app.put("/user/serena", (req, res) => {
@@ -33,4 +36,10 @@ app.delete("/user/serena", (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
+});
+
+res.status(404).send("Page not found");
+res.sendStatus(404);
+app.post("/register", (req, res) => {
+  res.send("Thanks for registering!");
 });
