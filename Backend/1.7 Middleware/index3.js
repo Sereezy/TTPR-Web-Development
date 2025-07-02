@@ -5,12 +5,17 @@ const port = 3000;
 
 //insert custom logger(){} middleware function here
 
+function logger(req, res, next) {
+  console.log("Request method: ", req.method)
+  console.log("Request url: ", req.url)
+  next();
+}
 
 //calling custom middleware function with app.use()
 app.use(logger);
 
 app.get("/", (req, res) => {
-  res.send("Hello");
+  res.send("Hello!!!");
 });
 
 app.listen(port, () => {

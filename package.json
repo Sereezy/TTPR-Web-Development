@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Sereezy/TTPR-Web-Development#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
   }
 }
