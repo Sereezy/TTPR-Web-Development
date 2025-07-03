@@ -19,8 +19,10 @@ function whosPaying(names) {
 /******Don't change the code above*******/
     
     //Write your code here.
-    
-    
+    var range = names.length
+    var index = Math.floor(Math.random()*range)
+    var randomperson = names[index]
+    return `${randomperson} is going to buy lunch today`
     
     
 

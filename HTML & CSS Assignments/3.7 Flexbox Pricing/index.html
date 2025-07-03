@@ -9,8 +9,10 @@
       rel="stylesheet"
     />
     <style>
-      body {
+      body,html {
+
         font-family: "Sono", sans-serif;
+        height: 100%;
       }
 
       @media (max-width: 1250px) {
@@ -19,6 +21,30 @@
           height: 100%;
         }
       }
+      .pricing-container{
+        border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 2rem;
+        
+
+      }
+      .pricing-plan {
+        border: 2px solid blue;
+        background-color: beige;
+        height: 40%;
+        max-width: 400px;
+        padding: 20px;
+        text-align: center;
+        
+      }
+      .plan-title {
+        font-weight:bold;
+        font-size: 24px;
+      }
+      
     </style>
   </head>
 
