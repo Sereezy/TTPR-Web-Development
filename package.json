@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Sereezy/TTPR-Web-Development#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "inquirer": "^12.6.3"
+    "inquirer": "^12.6.3",
+    "morgan": "^1.10.0"
   },
   "keywords": []
 }
