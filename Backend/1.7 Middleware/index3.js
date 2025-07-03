@@ -9,7 +9,6 @@ function logger(req, res, next){
   console.log("Request url: ", req.url);
   next();
 }
-
 //calling custom middleware function with app.use()
 app.use(logger);
 
