@@ -3,7 +3,11 @@ Write a function that slices the users input to 140 characters.
 
 Return the sliced input
 */
+function sliceString(text)
+{
+    return text.slice(0,140);
 
+}
 
 
 
@@ -21,3 +25,4 @@ console.log(slicedString);
 
 // Log the character count to confirm it’s 140 characters or fewer
 console.log("Character count:", slicedString.length);
+
