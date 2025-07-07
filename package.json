@@ -1,5 +1,16 @@
 {
+  "name": "express_server-npm",
+  "version": "1.0.0",
+  "description": "Making Express Server",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WenXiong",
+  "license": "ISC",
   "dependencies": {
-    "superheroes": "^4.0.0"
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
   }
 }

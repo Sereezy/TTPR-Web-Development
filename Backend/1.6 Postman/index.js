@@ -9,9 +9,11 @@ const port = 3000;
 // You should not get any 404s or 500 status codes.
 // *********************
 
-app.get("/", (req, res) => {
+
+app.get("/", function (req,res){
   res.send("<h1>Home Page</h1>");
-});
+})
+
 
 app.post("/register", (req, res) => {
   //Do something with the data
@@ -31,6 +33,8 @@ app.delete("/user/serena", (req, res) => {
   res.sendStatus(200);
 });
 
+
 app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
+  console.log(`Server is running on port ${port}.`)
+
+})
