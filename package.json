@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Sereezy/TTPR-Web-Development#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
     "nodemon": "^3.1.10"
   }

@@ -4,33 +4,27 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
-
-var bandName = "";
-
+var bandName = ""; 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 function bandNameGenerator(req, res, next) {
-  console.log(req.body);
+  console.log(res.body);
   bandName = req.body.street + req.body.pet;
   next();
 }
-
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
-
 //Runs on all routes, so it should go AFTER app.get() to avoid running on routes that don't have form data like 'street' and 'pet'
 app.use(bandNameGenerator)
-
 
 app.post("/submit", (req, res) => {
   res.send(`<h1>Your band name is:</h1><h2>${bandName}✌️</h2>`);
 });
-
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
