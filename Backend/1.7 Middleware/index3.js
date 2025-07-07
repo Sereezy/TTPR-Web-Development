@@ -4,7 +4,10 @@ const app = express();
 const port = 3000;
 
 //insert custom logger(){} middleware function here
-
+function logger (req, res, next) {
+  console.log(req.method, req.url);
+  next();
+}
 
 //calling custom middleware function with app.use()
 app.use(logger);
