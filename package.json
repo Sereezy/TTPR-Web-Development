@@ -1,21 +1,26 @@
 {
-<<<<<<< HEAD
   "dependencies": {
     "body-parser": "^2.2.0",
-=======
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
   "name": "ttpr-web-development",
   "version": "1.0.0",
   "description": "This repository will contain all of our classroom projects for the web development bootcamp.",
   "main": "index.js",
+  "devDependencies": {},
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sereezy/TTPR-Web-Development.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
->>>>>>> fd8b7a536ffa4f8ce40485918e9ba3f3197b4d46
-    "express": "^5.1.0"
-  }
+  "bugs": {
+    "url": "https://github.com/Sereezy/TTPR-Web-Development/issues"
+  },
+  "homepage": "https://github.com/Sereezy/TTPR-Web-Development#readme"
 }
