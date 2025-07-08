@@ -16,3 +16,9 @@ document.querySelector("h1").classList.remove("huge");
 document.querySelector("h1").classList.toggle("huge");
 document.querySelector("a").setAttribute("href", "https://www.linkedin.com")
 
+document.querySelector(".btn").addEventListener("click", function(){
+	//what to do
+    document.body.classList.toggle("pink-background");
+})
+
+
