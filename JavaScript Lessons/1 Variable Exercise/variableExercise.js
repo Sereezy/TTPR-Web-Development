@@ -27,8 +27,13 @@ function test() {
 /***********Do not change the code above 👆*******/
 //Write your code on lines 29 - 31:
 var c = a;
+<<<<<<< HEAD
+a = b;
+b = c;
+=======
 a=b;
 b=c;
+>>>>>>> 89f85d337fd99d6283305a5e732705df2c53ca84
 
     
 /***********Do not change the code below 👇*******/

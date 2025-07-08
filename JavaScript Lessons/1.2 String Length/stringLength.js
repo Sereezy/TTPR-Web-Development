@@ -7,3 +7,8 @@ Twitter use to have a character count limit of 140.
   The function should return a message in this format:
   " There are [stringLength] characters in [text]. You have [140 - stringLength] characters remaining "
 */
+function lengthverifyer(person){
+var lengthofstring = person.length;
+console.log(`There are ${lengthofstring} characters in ${person}. You have ${140-lengthofstring} characters remaining`)}
+var person = 'hello I would like to know if there is anybody reading this message' ;
+console.log(lengthverifyer(person));
