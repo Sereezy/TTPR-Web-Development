@@ -22,6 +22,7 @@
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "inquirer": "^12.6.3",
+    "morgan": "^1.10.0",
     "sillyname": "^0.1.0",
     "superheroes": "^4.0.0"
   },
