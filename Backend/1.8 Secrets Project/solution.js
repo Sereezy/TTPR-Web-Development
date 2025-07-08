@@ -18,12 +18,12 @@ function passwordCheck(req, res, next) {
   }
   next();
 }
-app.use(passwordCheck);
+
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
-
+app.use(passwordCheck);
 app.post("/check", (req, res) => {
   if (userIsAuthorised) {
     res.sendFile(__dirname + "/public/secret.html");
