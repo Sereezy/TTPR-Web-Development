@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.post('/submit', (req, res, next) => {
-    console.log(req)
+    console.log('request: ', req.body)
 })
 
 app.listen(port, () => {
