@@ -3,11 +3,22 @@
 
 <head>
   <title>Secrets</title>
+  <script>
+    function passwordCheck(event) {
+      event.preventDefault(); // prevent form submission
+      const password = document.getElementById("password").value;
+      if (password === "ILoveProgramming") {
+        window.location.href = "secret.html";
+      } else {
+        alert("Incorrect password. Try again.");
+      }
+    }
+  </script>
 </head>
 
 <body>
   <h1>Secrets</h1>
-  <form action="/check" method="POST">
+  <form action="/check" method="POST" onsubmit="passwordCheck(event)">
     <label for="password">Password:</label>
     <input type="text" id="password" name="password" required>
     <input type="submit" value="Submit">
