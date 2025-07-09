@@ -5,6 +5,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
 
+app.set("view engine", "ejs");
+
 app.set("views", __dirname + "/views");
 
 app.get("/", (req, res) => {
@@ -18,7 +20,7 @@ app.get("/", (req, res) => {
     type = "the weekend";
     adv = "it's time to have some fun";
   }
-  res.render("index.ejs", {
+  res.render("index", {
     dayType: type,
     advice: adv,
   });
