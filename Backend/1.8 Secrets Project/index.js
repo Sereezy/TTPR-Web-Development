@@ -14,27 +14,30 @@ var userIsAuthorised = false;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-function passwordCheck(req, res, next) {
+function passwordCheck(req) {
   const password = req.body["password"];
   if (password === "ILoveProgramming") {
     userIsAuthorised = true;
   }
-  next();
+  
 }
 
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+app.get("/", (_, res) => {
+  res.render("index.ejs", {
+    dayType: type,
+    advice: adv,
+  });
 });
 
 app.use(passwordCheck);
 
 app.post("/check", (req, res) => {
+  passwordCheck(req);
   if (userIsAuthorised) {
     res.sendFile(__dirname + "/public/secret.html");
   } else {
     res.sendFile(__dirname + "/public/index.html");
-
   }
 });
 

@@ -9,7 +9,7 @@ const port = 3000;
 
 app.set("views", __dirname + "/views");
 
-function weekdayCheck(res, next) {
+function weekdayCheck(req, res, next) {
   const date = new Date();
   const day = date.getDay();
   if (day === 0 || day === 6) {
@@ -17,17 +17,18 @@ function weekdayCheck(res, next) {
       dayType: "a weekend",
       advice: "it's time to relax",
     });
-    console.log("dayType: a weekend, advice: it's time to relax");
   } else {
     next();
   }
 }
-app.get("/", (req ,res) => {
-  res.render("Backend/1.9 EJS/views/index.ejs", {
+
+
+app.get("/", weekdayCheck, (req , res) => {
+
+  res.render("index.ejs", {
     dayType: "a weekday",
     advice: "it's time to work hard",
   });
-  app.use(weekdayCheck);
 });
 
 app.listen(port, () => {
