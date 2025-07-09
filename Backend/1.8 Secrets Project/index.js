@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
@@ -36,3 +37,8 @@ app.post("/check", (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+=======
+//To see how the final website should work, run "node solution.js".
+//Make sure you have installed all the dependencies
+//The password is ILoveProgramming
+>>>>>>> 6d723e7732b6043df166dc422a04565338c0fb2c
