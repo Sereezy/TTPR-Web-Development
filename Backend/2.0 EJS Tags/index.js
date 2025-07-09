@@ -2,6 +2,8 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+app.set("views", "/Users/ttp/Documents/GitHub/TTPR-Web-Development/Backend/2.0 EJS Tags/views");
+
 app.get("/", (req, res) => {
   const data = {
     title: "EJS Tags",
