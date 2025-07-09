@@ -1,10 +1,15 @@
 import express from "express";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = 3000;
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+app.set("views", __dirname + "/views");
 
 app.get("/", (req, res) => {
-  const today = new Date();
+  const today = new Date("June 24, 2023 11:13:00");
   //Test code
   // weekend:
   // new Date("June 24, 2023 11:13:00");
