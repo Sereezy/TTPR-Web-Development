@@ -4,7 +4,10 @@
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
     "inquirer": "^12.6.3",
-    "qr-image": "^3.2.0"
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "qr-image": "^3.2.0",
+    "url": "^0.11.4"
   },
   "name": "npm-learning",
   "version": "1.0.0",
