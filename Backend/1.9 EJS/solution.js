@@ -7,11 +7,6 @@ app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   const today = new Date();
-  //Test code
-  // weekend:
-  // new Date("June 24, 2023 11:13:00");
-  // weekday:
-  // new Date("June 20, 2023 11:13:00");
   const day = today.getDay();
 
   // console.log(day);
