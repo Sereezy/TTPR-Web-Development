@@ -1,27 +1,15 @@
 import express from "express";
-import bodyParser from "body-parser";
-
 const app = express();
 const port = 3000;
-
-app.use(bodyParser.urlencoded({ extended: true }));
-
 app.get("/", (req, res) => {
-  res.render("index.ejs", {
-    title: "Welcome Page",           
+  const data = {
+    title: "EJS Tags",
     seconds: new Date().getSeconds(),
-    name: null                       
-  });
+    items: ["apple", "banana", "cherry"],
+    htmlContent: "<em> This is some em text</em>",
+  };
+  res.render("index.ejs", data);
 });
-
-app.post("/submit", (req, res) => {
-  res.render("index.ejs", {
-    title: "Form Submitted!",        
-    seconds: new Date().getSeconds(),
-    name: req.body["fName"]
-  });
-});
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

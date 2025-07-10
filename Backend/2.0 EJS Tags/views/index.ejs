@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title><%= title %></title>
-</head>
 <body>
   <h1><%= title %></h1>
   <p>Current second: <%= seconds %></p>
 
-  <% if (name) { %>
-    <h2>Hello, <%= name %>!</h2>
+  <% if (seconds % 2 === 0) { %>
+    <ul>
+      <% items.forEach(fruit => { %>
+        <li><%= fruit %></li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No items to display</p>
   <% } %>
 
-  <form action="/submit" method="POST">
-    <input type="text" name="fName" placeholder="First name" required>
-    <input type="text" name="lName" placeholder="Last name" required>
-    <button type="submit">Submit</button>
-  </form>
-</body>
-</html>
+  <p><%- htmlContent %></p>
+
+  <%- include("footer.ejs") %>
+  </body>
