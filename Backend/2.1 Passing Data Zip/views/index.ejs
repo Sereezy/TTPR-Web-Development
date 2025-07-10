@@ -9,11 +9,12 @@
 
 <body>
   <!-- Write your code here -->
-  <form action="/submit" method="POST">
-    <input type="text" name="fName" placeholder="First name">
-    <input type="text" name="lName" placeholder="Last name">
-    <input type="submit" value="OK">
-  </form>
+  <%- data %>
+    <form action="/submit" method="POST">
+      <input type="text" name="fName" placeholder="First name">
+      <input type="text" name="lName" placeholder="Last name">
+      <input type="submit" value="OK">
+    </form>
 </body>
 
 </html>
