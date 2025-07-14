@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
+app.set("views", "/Users/ttp/Documents/GitHub/TTPR-Web-Development/Backend/2.1 Passing Data Zip/views")
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {

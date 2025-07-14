@@ -9,6 +9,9 @@
 
 <body>
   <!-- Write your code here -->
+  <% if (fName && lName) { %>
+    <h2>Hello, <%= fName %> <%= lName %>!</h2>
+  <% } %>
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">
