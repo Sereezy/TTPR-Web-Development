@@ -1,0 +1,18 @@
+{
+  "name": "1.9-ejs",
+  "version": "1.0.0",
+  "main": "solution.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "url": "^0.11.4"
+  }
+}
