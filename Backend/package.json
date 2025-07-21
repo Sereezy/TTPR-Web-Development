@@ -24,6 +24,7 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.1.10",
     "sillyname": "^0.1.0",
-    "superheroes": "^4.0.0"
+    "superheroes": "^4.0.0",
+    "url": "^0.11.4"
   }
 }
