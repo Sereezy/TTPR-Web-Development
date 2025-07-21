@@ -119,9 +119,9 @@ $("h1").on("mouseover", function(){
 })
 
 // 7. Toggle the <h1> visibility when any button is clicked using .slideToggle().
-//$("button").on("click", function(){
-//    $("h1").slideToggle();
-//})
+$("button").on("click", function(){
+    $("h1").slideToggle();
+})
 
 // 8. Change the anchor tag’s href to point to https://www.wikipedia.org/.
 $("a").attr("href", "https://www.wikipedia.org/");
