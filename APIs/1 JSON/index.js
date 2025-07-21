@@ -17,9 +17,25 @@ app.get("/", (req, res) => {
 });
 
 app.post("/recipe", (req, res) => {
+  switch (req.body.choice) {
+    case "chicken":
+      data = JSON.parse(recipeJSON)[0];
+      break;
+    case "beef":
+      data = JSON.parse(recipeJSON)[1];
+      break;
+    case "fish":
+      data = JSON.parse(recipeJSON)[2];
+      break;
+    default:
+      break;
+  }
+  res.redirect("/");
+ });
+ 
   //Step 3: Write your code here to make this behave like the solution website.
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
-});
+
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
