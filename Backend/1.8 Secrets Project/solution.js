@@ -18,13 +18,21 @@ function passwordCheck(req, res, next) {
   }
   next();
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> ce31922341251903b168393c9a34d44e45f62be1
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
+<<<<<<< HEAD
+app.use(passwordCheck);
+=======
 
 app.use(passwordCheck);
 
+>>>>>>> ce31922341251903b168393c9a34d44e45f62be1
 app.post("/check", (req, res) => {
   if (userIsAuthorised) {
     res.sendFile(__dirname + "/public/secret.html");
