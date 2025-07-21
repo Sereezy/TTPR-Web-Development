@@ -9,6 +9,12 @@
 
 <body>
   <!-- Write your code here -->
+   <h1><% if (fullLength) {%>
+    There are <%= fullLength.length%>
+    <%} else {%>
+      Enter your name below 👇
+    <%}%>
+    </h1>
   <form action="/submit" method="POST">
     <input type="text" name="fName" placeholder="First name">
     <input type="text" name="lName" placeholder="Last name">

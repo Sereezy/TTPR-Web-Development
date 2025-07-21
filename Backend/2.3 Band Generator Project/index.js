@@ -16,9 +16,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   //Step 1 - Make the get route work and render the index.ejs file.
+  res.render("index.ejs")
 });
 
 app.post("/submit", (req, res) => {
+
+  res.render("index.ejs",
+    {
+      adjective : adj[Math.round(Math.random() * adj.length)],
+      noun1 : noun[Math.round(Math.random() * noun.length)]
+    }
+  )
   //Step 2 - Make the generate name functionality work
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
   //Then:
