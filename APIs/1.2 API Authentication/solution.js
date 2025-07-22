@@ -5,11 +5,15 @@ const app = express();
 const port = 3000;
 const API_URL = "https://secrets-api.appbrewery.com";
 
-// TODO: Replace the values below with your own before running this file.
-const yourUsername = "";
-const yourPassword = "";
-const yourAPIKey = "";
-const yourBearerToken = "";
+app.set('views engine', 'ejs')
+app.set('views', '/Users/suti48542/Desktop/TTPR-Web-Development/APIs/1.2 API Authentication/views')
+
+
+
+const yourUsername = "Sutibro";
+const yourPassword = "Sutibro";
+const yourAPIKey = "b92d55b6-3c8d-47cb-a693-ec2a0644e028";
+const yourBearerToken = "ca1c2e29-d60a-4903-b0e0-cdde693d5259";
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
