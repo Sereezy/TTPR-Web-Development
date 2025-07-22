@@ -5,6 +5,8 @@ import axios from "axios";
 const app = express();
 const port = 3000;
 
+app.set('views engine', 'ejs')
+app.set('views', '/Users/suti48542/Desktop/TTPR-Web-Development/APIs/1.1 Axios/views')
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
