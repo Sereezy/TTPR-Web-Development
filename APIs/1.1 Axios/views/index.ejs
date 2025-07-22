@@ -14,7 +14,7 @@
 
     <form action="/" id="form" class="form" method="POST">
       <select name="type" class="form-select">
-        <option value="" data-display="Select">Random type</option>
+        <option value="" result-display="Select">Random type</option>
         <option value="education">Education</option>
         <option value="charity">Charity</option>
         <option value="recreational">Recreational</option>
@@ -36,15 +36,19 @@
     <section id="cards" class="cards">
       <article class="card-item">
         <h2 class="card-activity">
-          <!-- Show Activity -->
+         <% console.log('locals dat', locals.data) %>
+          <% if (locals.data && Array.isArray(locals.data))  {  %>
+         <%= data[0].activity %>
         </h2>
         <div class="card-info">
           <span class="card-type">
-            <!-- Show Activity type -->
+            <%= data[0].type %>
           </span>
           <span class="card-participants">
-            <!-- participants: Show participant number -->
+            participants: 
             <span class="card-number"></span>
+            <%= data[0].participants %> 
+             <%}%>
           </span>
         </div>
       </article>

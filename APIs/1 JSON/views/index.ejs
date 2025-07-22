@@ -22,9 +22,12 @@
 
     <h3>Ingredients:</h3>
     <ul id="ingredientsList">
-      <li>Protein name, protein preparation</li>
-      <li>Salsa name</li>
-      <li>Every other topping</li>
+      <li id="proteinNames"><% switch (req.body.choice) { %>
+      <%case "chicken":%>
+    <%=recipeJSON[1].name + recipeJSON[1].preparation%>
+    <%}%></li>
+      <li id="salsaNames">Salsa name</li>
+      <li id="additionalToppings">Every other topping</li>
     </ul>
 
 

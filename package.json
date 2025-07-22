@@ -1,5 +1,11 @@
 {
+  "type": "module",
   "dependencies": {
+    "axiom": "^0.1.6",
+    "axios": "^1.10.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "js": "^0.1.0",
     "nodemon": "^3.1.10"
   }
 }
