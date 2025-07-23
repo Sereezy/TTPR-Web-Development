@@ -4,7 +4,7 @@ import axios from "axios";
 
 const app = express();
 const port = 3000;
-
+const api = "https://bored-api.appbrewery.com/"
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //   JSON data from response.data and edit the index.ejs file accordingly.
 app.get("/", async (req, res) => {
   try {
-    const response = await axios.get("https://bored-api.appbrewery.com/random");
+    const response = await axios.get(api + "/random");
     const result = response.data;
     res.render("index.ejs", { data: result });
   } catch (error) {
@@ -25,8 +25,18 @@ app.get("/", async (req, res) => {
 });
 
 app.post("/", async (req, res) => {
-  console.log(req.body);
+  console.log(req.body)
+  try {
+    const { type, participants } = req.body;
+    let result;
+    result= await axios.get(api + `/flter?type=${type}&participants=${participants}`)
+    let data = result.data
+    console.log(data)
+    // res.render("index.ejs", { data: });
+  } catch (err) {
+    res.render("index.ejs", { data: "No activities that match your criteria."});
 
+  }
   // Step 2: Play around with the drop downs and see what gets logged.
   // Use axios to make an API request to the /filter endpoint. Making
   // sure you're passing both the type and participants queries.
