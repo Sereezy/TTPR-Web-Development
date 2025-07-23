@@ -12,8 +12,10 @@ const recipeJSON =
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+let recipe;
+
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  res.render("index.ejs" , {recipe: recipe});
 });
 
 app.post("/recipe", (req, res) => {
@@ -23,24 +25,25 @@ app.post("/recipe", (req, res) => {
 
   const data = JSON.parse(recipeJSON)
 
-  var ingredients;
-
   switch (choice){
     case "chicken":
-      ingredients = data[0];
+      recipe = data[0];
       break;
     case "beef":
-      ingredients = data[1];
+      recipe = data[1];
       break;
     case "fish":
-      ingredients = data[2];
+      recipe = data[2];
       break;
   }
 
   //Step 4: Add code to views/index.ejs to use the recieved recipe object.
-  res.render("index.ejs", {"recipe": ingredients});
+  res.redirect("/");
 });
 
 app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
+
+
+//"apiKey": "7e8b50e5-74a1-4844-a333-4f20dc215d82"
