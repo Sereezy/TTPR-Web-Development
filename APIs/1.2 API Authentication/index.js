@@ -8,8 +8,8 @@ const API_URL = "https://secrets-api.appbrewery.com/";
 //TODO 1: Fill in your values for the 3 types of auth.
 const yourUsername = "beanjvice";
 const yourPassword = "beannns";
-const yourAPIKey = "";
-const yourBearerToken = "";
+const yourAPIKey = "ddb96973-db0b-48c4-bf61-54600e6364c6";
+const yourBearerToken = "65af697d-1876-4148-9f22-95987a9ca9a3";
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
@@ -69,6 +69,10 @@ app.get("/apiKey", async (req, res) => {
     res.status(404).send(error.message);
   }
 });
+
+const config = {
+  headers: { Authorization: `Bearer ${yourBearerToken}` },
+};
 
 app.get("/bearerToken", async (req, res) => {
   //TODO 5: Write your code here to hit up the /secrets/{id} endpoint
