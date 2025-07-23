@@ -5,8 +5,8 @@ import pg from "pg";
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
-  database: "world",
-  password: "12345",
+  database: "World",
+  password: "Solorzan0",
   port: 5432,
 });
 
@@ -16,7 +16,7 @@ const port = 3000;
 db.connect();
 
 let quiz = [];
-db.query("SELECT * FROM capitals", (err, res) => {
+db.query("SELECT * FROM capital", (err, res) => {
   if (err) {
     console.error("Error executing query", err.stack);
   } else {
