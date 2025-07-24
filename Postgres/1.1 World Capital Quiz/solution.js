@@ -1,6 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const db = new pg.Client({
   user: "postgres",
@@ -12,6 +17,10 @@ const db = new pg.Client({
 
 const app = express();
 const port = 3000;
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
 
 db.connect();
 
@@ -39,7 +48,7 @@ app.get("/", async (req, res) => {
   totalCorrect = 0;
   await nextQuestion();
   console.log(currentQuestion);
-  res.render("index.ejs", { question: currentQuestion });
+  res.render("index", { question: currentQuestion });
 });
 
 // POST a new post
@@ -53,7 +62,7 @@ app.post("/submit", (req, res) => {
   }
 
   nextQuestion();
-  res.render("index.ejs", {
+  res.render("index", {
     question: currentQuestion,
     wasCorrect: isCorrect,
     totalScore: totalCorrect,
