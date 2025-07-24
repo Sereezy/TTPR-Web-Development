@@ -6,6 +6,8 @@ const app = express();
 const port = 3000;
 const API_URL = "https://secrets-api.appbrewery.com";
 
+app.set('views engine', 'ejs')
+app.set('views', '/Users/ttp/Documents/GitHub/TTPR-Web-Development/APIs/1.3 REST APIs/views')
 //Add your own bearer token from the previous lesson.
 const yourBearerToken = "08f3026d-9c6c-4d88-a3b2-c579dc106247";
 const config = {
