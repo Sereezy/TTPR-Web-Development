@@ -1,8 +1,33 @@
 import express from "express";
 import bodyParser from "body-parser";
+import pg from "pg";
+import { dirname } from "path";
+import { fileURLToPath } from "url";  
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
+app.set("views", "/Users/zohinur/zohinur:TTPR/TTPR-Web-Development/Postgres/1.1 Postgres Read/views");
+
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "World",
+  password: "2014",
+  port: 5433,
+})
+
+let quiz = [];
+db.query("SELECT * FROM flags", (err, res) => {
+  if (err) {
+    console.error("Error Executing query", err.stack);
+  }else {
+    quiz = res.rows;
+  }
+  db.end();
+  });
+
+db.connect();
 
 let totalCorrect = 0;
 

@@ -1,16 +1,40 @@
 import express from "express";
 import bodyParser from "body-parser";
+import pg from "pg";
+
+
 
 const app = express();
 const port = 3000;
 
+
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "World",
+  password: "2014",
+  port: 5433,
+});
+
+db.connect();
+
+let quiz = [];
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.error("Error Executing query", err.stack);
+  } else {
+    quiz = res.rows; 
+  }
+  db.end();
+});
+
 //quiz item that is an array of 3 objects
 //the objects model after the records in our database
-let quiz = [
-  { country: "France", capital: "Paris" },
-  { country: "United Kingdom", capital: "London" },
-  { country: "United States of America", capital: "New York" },
-];
+// let quiz = [
+//   { country: "France", capitals: "Paris" },
+//   { country: "United Kingdom", capitals: "London" },
+//   { country: "United States of America", capitals: "New York" },
+// ];
 
 //scorekeeper
 let totalCorrect = 0;
@@ -36,7 +60,7 @@ app.post("/submit", (req, res) => {
   let answer = req.body.answer.trim();
   let isCorrect = false;
   //checks if the answer matches the user input
-  if (currentQuestion.capital.toLowerCase() === answer.toLowerCase()) {
+  if (currentQuestion.capital && answer && currentQuestion.capital.toLowerCase() === answer.toLowerCase()) {
     totalCorrect++;
     console.log(totalCorrect);
     isCorrect = true;
