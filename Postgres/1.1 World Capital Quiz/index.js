@@ -1,8 +1,19 @@
 import express from "express";
 import bodyParser from "body-parser";
+import pg from "pg";
+
+const db = new pg.Client({
+  user:"postgres",
+  host: "localhost",
+  database: "world",
+  password: "12345",
+  port: 5432,
+});
 
 const app = express();
 const port = 3000;
+
+db.connect();
 
 //quiz item that is an array of 3 objects
 //the objects model after the records in our database
