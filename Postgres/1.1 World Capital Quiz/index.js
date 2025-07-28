@@ -1,16 +1,29 @@
 import express from "express";
 import bodyParser from "body-parser";
+import pg from "pg";
 
 const app = express();
 const port = 3000;
 
-//quiz item that is an array of 3 objects
-//the objects model after the records in our database
-let quiz = [
-  { country: "France", capital: "Paris" },
-  { country: "United Kingdom", capital: "London" },
-  { country: "United States of America", capital: "New York" },
-];
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: "925874478",
+  port: 5432,
+});
+let quiz = [];
+db.connect();
+
+db.query("SELECT * from Capitals where id =96", (err, res) => {
+  if (err) {
+    console.error("Error executing query", err.stack);
+  } else {
+    quiz = res.rows;
+    console.log(quiz);
+  }
+  db.end();
+});
 
 //scorekeeper
 let totalCorrect = 0;
@@ -18,7 +31,6 @@ let totalCorrect = 0;
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
 
 let currentQuestion = {};
 
