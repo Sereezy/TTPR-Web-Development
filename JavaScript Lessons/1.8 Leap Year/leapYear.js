@@ -1,5 +1,6 @@
 /*
-Write a program that works out whether if a given year is a leap year. A normal year has 365 days, leap years have 366, with an extra day in February. 
+Write a program that works out whether if a given year is a leap year. 
+A normal year has 365 days, leap years have 366, with an extra day in February. 
 The reason why we have leap years is really fascinating, this video goes into more detail.
 
 This is how to work out whether if a particular year is a leap year:
@@ -40,3 +41,20 @@ Example Input 2
 Example Output 2
 Not leap year.
 */
+
+function isLeapYear(year) {
+  if (year % 4 === 0) {
+    if (year % 100 === 0) {
+      if (year % 400 === 0) {
+        return "Leap year";
+      } else {
+        return "not leap year";
+      }
+    } else {
+      return "a leap year";
+    }
+  } else {
+    return "not leap year";
+  }
+}
+console.log(isLeapYear(2100));

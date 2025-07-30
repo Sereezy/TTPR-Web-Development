@@ -37,3 +37,19 @@ Do NOT change any of the existing code.
 
 The first two numbers in the sequence must be 0 and 1.
 */
+
+function fibonacciGenerator(n) {
+  var fibonacciList = [0, 1];
+  if (n == 0) {
+    return [];
+  }
+  if (n == 1) {
+    return [0];
+  }
+  for (let i = 2; i < n; i++) {
+    fibonacciList.push(fibonacciList[i - 1] + fibonacciList[i - 2]);
+  }
+
+  return fibonacciList;
+}
+console.log(fibonacciGenerator(9));

@@ -34,4 +34,33 @@ h1 {
 footer {
   text-align: right;
   color: midnightblue;
+<<<<<<< HEAD:3.4 Web Design Mock/style.css
 }
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.card-container{
+  display: flex;
+}
+
+.tile-image{
+  width: 40%;
+  float: left;
+  margin-right: 45px;
+}
+
+
+
+
+
+ 
+  
+=======
+}
+>>>>>>> 746ea76e2cc6de912871adcbaab0297a4ef80b0a:HTML & CSS Assignments/3.4 Web Design Mock/style.css

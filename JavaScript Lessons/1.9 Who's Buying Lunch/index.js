@@ -11,22 +11,20 @@ Example Input
 Example Output
 Michael is going to buy lunch today!
 
-NOTE: Think about how we calculate a random number selected on a dice
+NOTE: Think about how we calculate a random number selected on a dice (math.random is what i remember)
 */
 
 function whosPaying(names) {
-    
-/******Don't change the code above*******/
-    
-    //Write your code here.
-    
-    
-    
-    
+  /******Don't change the code above*******/
 
+  //Write your code here.
+  var amountofPeople = names.length;
+  var randomPostion = Math.floor(Math.random() * amountofPeople);
+  var randomPerson = names[randomPostion];
+  return `${randomPerson} is going to buy lunch today!`;
 
-/******Don't change the code below*******/    
+  /******Don't change the code below*******/
 }
 
-var  people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"]
-console.log(whosPaying(people))
+var people = ["Angela", "Justin", "Jeremiah", "Aimee", "Billie"];
+console.log(whosPaying(people));

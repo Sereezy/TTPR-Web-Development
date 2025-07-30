@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Box Model</title>
+    <style>
+      /* Write your CSS code here */
+      div{
+        height: 200px;
+        width: 200px;
+      }
+      p{
+        margin: 0;
+      }
+      .box1{
+        background-color: pink;
+        padding: 20px;
+        border: 10px solid black;
+      }
+      .box2{
+        background-color: palegreen;
+        border-top: 20px solid black;        
+        border-bottom: 20px solid black;
+        border-right: 10px solid black;
+        border-left: 10px solid black;
+        margin-left: 260px;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>CSS Box Model</title>
-  <style>
-    /* Write your CSS code here */
+      .box3{
+        background-color: indianred;
+        border: 10px solid black;
+        margin-left: 40px;
+      }
+    </style>
+  </head>
 
-  </style>
-</head>
+  <body>
+    <div class="box1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+    id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+    dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.</p>
+    </div>
+    <div class="box2"></div>
+    <div class="box3"></div>
 
-<body>
-
-
-  <!-- TODOs:
+    <!-- TODOs:
 1. Create 3 Boxes using the div element.
 2. Set their sizes to 200px height by 200px wide.
 3. Set different background colors for each of the boxes (I used pink, palegreen and indianred).
@@ -28,7 +58,5 @@ Hint: Use the CSS inspector in Chrome.
 8. Set the 3rd div to have a 10px border 
 9. Set the margins for the divs so that each box corner touches the other. (See the solution.html in Live Server for reference)
 -->
-
-</body>
-
+  </body>
 </html>
